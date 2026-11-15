@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG4OKQW",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "sauce-smoke",
+    "started": "2026-11-14T15:12:48.777+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Máy Windows cục bộ",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localhost:8080",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "sauce-smoke",
+    "browser": "",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "fixture": {
+      "orders": 1,
+      "categories": [
+        "Điện thoại",
+        "Laptop",
+        "Phụ kiện"
+      ]
+    },
+    "smoke": {
+      "region": "eu-central",
+      "tunnelName": "hw03-task3",
+      "requestedPlatform": "macOS 14",
+      "requestedVersion": "18",
+      "status": "Local preflight only",
+      "checks": [
+        {
+          "name": "Proxy cục bộ",
+          "status": "Passed",
+          "observation": "GET /api/categories HTTP 200, 3 danh mục fixture.",
+          "elapsedMs": 13
+        }
+      ],
+      "evidence": [],
+      "api": [
+        "HW03_HTTP GET /api/categories 200",
+        "HW03_HTTP GET /api/categories 200"
+      ],
+      "elapsedMs": 14
+    },
+    "finished": "2026-11-14T15:12:51.077+07:00"
+  },
+  "results": []
+}

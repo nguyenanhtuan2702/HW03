@@ -1,0 +1,14 @@
+.env
+.env.*
+**/.remote-state/
+**/.tools/
+**/recordings/
+**/secrets/
+**/*_RIENG_TU.md
+**/*_NOP_MOODLE.md
+/task2/usability_artifacts/data/
+/task3/evidence/
+*.sqlite*
+*.mp4
+*.mov
+*.webm

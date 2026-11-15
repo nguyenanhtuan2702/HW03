@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG1SDXZ",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "firefox-windows",
+    "started": "2026-11-14T13:51:47.737+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Dell 15 DC15250",
+    "playwright": "1.62.1",
+    "node": "v24.22.1",
+    "frontend": "http://localhost:5174",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "headed",
+    "browser": "Firefox (Playwright build) 153.0",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 5174 xác nhận HTTP 200 trên loopback.",
+      "Ảnh cửa sổ chưa lưu: locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('li').filter({ hasText: /^Mã Giảm Giá$/ })\u001b[22m\n\u001b[2m    - locator resolved to <li class=\"cursor-pointer hover:text-blue-300 \">Mã Giảm Giá</li>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+    ]
+  },
+  "results": [
+    {
+      "id": "S-01",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "firefox-windows",
+      "preconditions": "Phiên Admin; ba mục tiêu đã tải.",
+      "testData": "Nhãn sidebar, tiêu đề, nút và thông báo thường dùng; bỏ qua hậu tố doanh thu của D-05.",
+      "issue": "",
+      "category": "ASSISTED",
+      "status": "Blocked",
+      "timestamp": "2026-11-14T13:52:42.449+07:00",
+      "expected": "Giao diện dùng tiếng Việt nhất quán, ngoại trừ thuật ngữ kỹ thuật chuẩn.",
+      "steps": [],
+      "actual": "locator.click: Timeout 5500ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Login', exact: true })\n    - locator resolved to <button class=\"w-full bg-blue-600 text-white p-2 rounded\">Login</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - performing click action\n",
+      "notes": "Gián đoạn kỹ thuật hoặc bộ kiểm thử; cần chẩn đoán.",
+      "evidence": "",
+      "reference": "task1/automation/shared-categories.cjs#S-01"
+    },
+    {
+      "id": "S-02",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "firefox-windows",
+      "preconditions": "Danh mục và Mã giảm giá đã tải, mỗi bảng có ít nhất một hàng.",
+      "testData": "Nút Thêm mới, Tạo mã và Xóa của hai bảng.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/160",
+      "category": "AUTOMATED",
+      "status": "Blocked",
+      "timestamp": "2026-11-14T13:52:49.516+07:00",
+      "expected": "Nút hành động tích cực màu xanh dương; nút xóa màu đỏ.",
+      "steps": [],
+      "actual": "locator.click: Timeout 5500ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Login', exact: true })\n    - locator resolved to <button class=\"w-full bg-blue-600 text-white p-2 rounded\">Login</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - performing click action\n",
+      "notes": "Gián đoạn kỹ thuật hoặc bộ kiểm thử; cần chẩn đoán.",
+      "evidence": "",
+      "reference": "task1/automation/shared-categories.cjs#S-02"
+    },
+    {
+      "id": "S-03",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "firefox-windows",
+      "preconditions": "Đã đăng nhập; ba view khả dụng.",
+      "testData": "Dashboard, Danh mục, Mã giảm giá.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/161",
+      "category": "AUTOMATED",
+      "status": "Blocked",
+      "timestamp": "2026-11-14T13:52:56.711+07:00",
+      "expected": "Mỗi trang có đúng một h1 mô tả nội dung trang.",
+      "steps": [],
+      "actual": "locator.click: Timeout 5500ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Login', exact: true })\n    - locator resolved to <button class=\"w-full bg-blue-600 text-white p-2 rounded\">Login</button>\n  - attempting click action\n    - waiting for element to be visible, enabled and stable\n    - element is visible, enabled and stable\n    - scrolling into view if needed\n    - done scrolling\n    - performing click action\n",
+      "notes": "Gián đoạn kỹ thuật hoặc bộ kiểm thử; cần chẩn đoán.",
+      "evidence": "",
+      "reference": "task1/automation/shared-categories.cjs#S-03"
+    },
+    {
+      "id": "S-04",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "firefox-windows",
+      "preconditions": "Ba màn ở trạng thái mặc định; có công cụ lấy màu chữ và nền.",
+      "testData": "Nhãn active, heading thẻ doanh thu, nút Tạo mã, placeholder danh mục.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/169",
+      "category": "ASSISTED",
+      "status": "Failed",
+      "timestamp": "2026-11-14T13:53:03.712+07:00",
+      "expected": "Chữ thường đạt tối thiểu 4.5:1, chữ lớn tối thiểu 3:1.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Đo chữ và nền của nút Xóa cỡ nhỏ qua màu trình duyệt, ngưỡng heuristic 4,5:1."
+      ],
+      "actual": "Nút Xóa có chữ rgb(255, 255, 255) trên nền rgb(239, 68, 68), tỷ lệ 3.76:1, dưới 4,5:1.",
+      "notes": "",
+      "evidence": "evidence/firefox-windows/HW03-MWG1SDXZ/S-04.png",
+      "reference": "task1/automation/shared-categories.cjs#S-04"
+    },
+    {
+      "id": "S-05",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "firefox-windows",
+      "preconditions": "Trình duyệt Chromium desktop ở 100%, khoảng 1440×900 CSS px.",
+      "testData": "Ba màn, điều hướng và thao tác chính.",
+      "issue": "",
+      "category": "MANUAL",
+      "status": "Blocked",
+      "timestamp": "2026-11-14T13:53:09.504+07:00",
+      "expected": "Nội dung và thao tác chính vẫn truy cập được; không có chồng lấn khiến thao tác bị che.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất."
+      ],
+      "actual": "Command failed: powershell.exe -NoProfile -ExecutionPolicy Bypass -File D:\\eshop-sut\\HW03\\task3\\automation\\capture-window.ps1 -WindowTitle Task 3 HW03-MWG1SDXZ -BrowserProcess firefox -OutputPath D:\\eshop-sut\\HW03\\task3\\evidence\\firefox-windows\\HW03-MWG1SDXZ\\unused.png -Zoom\nTask 3 window could not take focus.\r\nAt D:\\eshop-sut\\HW03\\task3\\automation\\capture-window.ps1:37 char:61\r\n+ ... Window() -ne $handle) { throw 'Task 3 window could not take focus.' }\r\n+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (Task 3 window could not take focus.:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : Task 3 window could not take focus.\r\n \r\n",
+      "notes": "Gián đoạn kỹ thuật hoặc bộ kiểm thử; cần chẩn đoán.",
+      "evidence": "",
+      "reference": "task1/automation/shared-categories.cjs#S-05"
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG5L5L2",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "sauce-smoke",
+    "started": "2026-11-14T15:38:08.774+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Máy Windows cục bộ",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localtest.me:8080",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 823",
+    "locale": "en-US",
+    "mode": "sauce-smoke",
+    "browser": "Safari 18.3",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, thêm một đơn pending cho smoke test",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "localFrontend": "http://127.0.0.1:8080",
+    "fixture": {
+      "orders": 1,
+      "categories": [
+        "Điện thoại",
+        "Laptop",
+        "Phụ kiện"
+      ]
+    },
+    "smoke": {
+      "region": "eu-central",
+      "tunnelName": "hw03-task3",
+      "requestedPlatform": "macOS 14",
+      "requestedVersion": "18",
+      "status": "Browser smoke passed",
+      "checks": [
+        {
+          "name": "Web Admin trên loopback",
+          "status": "Passed",
+          "observation": "http://127.0.0.1:8080: HTML, JavaScript và GET /api/categories đều HTTP 200; 3 danh mục fixture.",
+          "elapsedMs": 31
+        },
+        {
+          "name": "DNS và HTTP của hostname Safari",
+          "status": "Passed",
+          "observation": "localtest.me → 127.0.0.1. http://localtest.me:8080: HTML, JavaScript và GET /api/categories đều HTTP 200; 3 danh mục fixture.",
+          "elapsedMs": 21
+        },
+        {
+          "name": "Tài khoản và tunnel Ready",
+          "status": "Passed",
+          "observation": "hw03-task3: is_ready=true.",
+          "elapsedMs": 819
+        },
+        {
+          "name": "HTTP qua proxy chẩn đoán Sauce Connect",
+          "status": "Passed",
+          "observation": "http://localtest.me:8080: HTML, JavaScript và GET /api/categories đều HTTP 200; 3 danh mục fixture.",
+          "elapsedMs": 73
+        },
+        {
+          "name": "Khởi tạo phiên Safari/macOS",
+          "status": "Passed",
+          "observation": "Safari 18.3 · mac.",
+          "elapsedMs": 33963
+        },
+        {
+          "name": "Mở Web Admin qua tunnel",
+          "status": "Passed",
+          "observation": "Admin Login đã hiển thị tại http://localtest.me:8080.",
+          "elapsedMs": 2347
+        },
+        {
+          "name": "Đăng nhập và tải Dashboard",
+          "status": "Passed",
+          "observation": "Dashboard hiển thị 1 đơn, khớp SQLite sandbox.",
+          "elapsedMs": 2454
+        },
+        {
+          "name": "Tải Danh mục và đối chiếu API",
+          "status": "Passed",
+          "observation": "3 danh mục trong GUI, login và hai GET được backend xác nhận HTTP 200.",
+          "elapsedMs": 2127
+        },
+        {
+          "name": "Chụp ảnh thật trong phiên Safari",
+          "status": "Passed",
+          "observation": "Đã lưu ảnh nguyên bản. Cần rà artifact máy cloud để xác nhận thanh địa chỉ.",
+          "elapsedMs": 3652
+        }
+      ],
+      "evidence": [
+        "evidence/sauce-smoke/HW03-MWG5L5L2/categories-safari-viewport.png",
+        "evidence/sauce-smoke/HW03-MWG5L5L2/sauce-job-video.mp4"
+      ],
+      "jobId": "bfeaf87fe1ca4ad5b2d70804cb49569d",
+      "actual": {
+        "browser": "Safari",
+        "version": "18.3",
+        "platform": "mac",
+        "platformVersion": "14.6"
+      },
+      "observedUrl": "http://localtest.me:8080/",
+      "api": [
+        "HW03_HTTP POST /api/login 200",
+        "HW03_HTTP GET /api/admin/orders 200",
+        "HW03_HTTP GET /api/categories 200"
+      ],
+      "client": {
+        "locale": "en-US",
+        "platform": "MacIntel",
+        "viewport": [
+          1440,
+          823
+        ],
+        "agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3 Safari/605.1.15"
+      },
+      "sessionClosed": true,
+      "sessionElapsedMs": 47324,
+      "sauceMetadata": {
+        "browser": "safari",
+        "browser_version": "18.",
+        "os": "Mac 14",
+        "status": "complete",
+        "record_video": true,
+        "proxied": false
+      },
+      "elapsedMs": 51131
+    },
+    "finished": "2026-11-14T15:39:02.111+07:00"
+  },
+  "results": []
+}

@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG4Q3MZ",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "sauce-smoke",
+    "started": "2026-11-14T15:13:59.915+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Máy Windows cục bộ",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localhost:8080",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "sauce-smoke",
+    "browser": "",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "fixture": {
+      "orders": 1,
+      "categories": [
+        "Điện thoại",
+        "Laptop",
+        "Phụ kiện"
+      ]
+    },
+    "smoke": {
+      "region": "eu-central",
+      "tunnelName": "hw03-task3",
+      "requestedPlatform": "macOS 14",
+      "requestedVersion": "18",
+      "status": "Blocked",
+      "checks": [
+        {
+          "name": "Proxy cục bộ",
+          "status": "Passed",
+          "observation": "GET /api/categories HTTP 200, 3 danh mục fixture.",
+          "elapsedMs": 23
+        },
+        {
+          "name": "Tài khoản và tunnel Ready",
+          "status": "Passed",
+          "observation": "hw03-task3: is_ready=true.",
+          "elapsedMs": 828
+        },
+        {
+          "name": "Khởi tạo phiên Safari/macOS",
+          "status": "Passed",
+          "observation": "Safari 18.3 · mac.",
+          "elapsedMs": 33116
+        },
+        {
+          "name": "Mở Web Admin qua tunnel",
+          "status": "Blocked",
+          "observation": "Waiting for element to be located By(xpath, //h2[normalize-space(.)='Admin Login'])",
+          "elapsedMs": 11336
+        }
+      ],
+      "evidence": [],
+      "jobId": "690fb1970f804f1590b71b6f33df8b26",
+      "actual": {
+        "browser": "Safari",
+        "version": "18.3",
+        "platform": "mac",
+        "platformVersion": "14.6"
+      },
+      "sessionClosed": true,
+      "sessionElapsedMs": 47116,
+      "sauceMetadata": {
+        "browser": "safari",
+        "browser_version": "18.",
+        "os": "Mac 14",
+        "status": "complete",
+        "record_video": true
+      },
+      "api": [
+        "HW03_HTTP GET /api/categories 200",
+        "HW03_HTTP GET /api/categories 200"
+      ],
+      "elapsedMs": 49018
+    },
+    "error": "Mở Web Admin qua tunnel: Waiting for element to be located By(xpath, //h2[normalize-space(.)='Admin Login'])",
+    "finished": "2026-11-14T15:14:51.197+07:00"
+  },
+  "results": []
+}

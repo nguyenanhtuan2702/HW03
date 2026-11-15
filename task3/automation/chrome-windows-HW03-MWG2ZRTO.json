@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG2ZRTO",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "chrome-windows",
+    "started": "2026-11-14T14:25:31.937+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Dell 15 DC15250",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localhost:5174",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "manual-server",
+    "browser": "",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 5174 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "finished": "2026-11-14T14:25:40.302+07:00"
+  },
+  "results": []
+}

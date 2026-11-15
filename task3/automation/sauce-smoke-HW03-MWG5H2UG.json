@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG5H2UG",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "sauce-smoke",
+    "started": "2026-11-14T15:34:58.600+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Máy Windows cục bộ",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localtest.me:8080",
+    "backend": "http://localhost:3000",
+    "viewport": null,
+    "locale": null,
+    "mode": "sauce-smoke",
+    "browser": "",
+    "identityOverlay": false,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, thêm một đơn pending cho smoke test",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "localFrontend": "http://127.0.0.1:8080",
+    "fixture": {
+      "orders": 1,
+      "categories": [
+        "Điện thoại",
+        "Laptop",
+        "Phụ kiện"
+      ]
+    },
+    "smoke": {
+      "region": "eu-central",
+      "tunnelName": "hw03-task3",
+      "requestedPlatform": "macOS 14",
+      "requestedVersion": "18",
+      "status": "Local preflight only",
+      "checks": [
+        {
+          "name": "Web Admin trên loopback",
+          "status": "Passed",
+          "observation": "http://127.0.0.1:8080: HTML, JavaScript và GET /api/categories đều HTTP 200; 3 danh mục fixture.",
+          "elapsedMs": 64
+        },
+        {
+          "name": "DNS và HTTP của hostname Safari",
+          "status": "Passed",
+          "observation": "localtest.me → 127.0.0.1. http://localtest.me:8080: HTML, JavaScript và GET /api/categories đều HTTP 200; 3 danh mục fixture.",
+          "elapsedMs": 27
+        }
+      ],
+      "evidence": [],
+      "api": [
+        "HW03_HTTP GET /api/categories 200",
+        "HW03_HTTP GET /api/categories 200",
+        "HW03_HTTP GET /api/categories 200"
+      ],
+      "elapsedMs": 93
+    },
+    "finished": "2026-11-14T15:35:00.984+07:00"
+  },
+  "results": []
+}

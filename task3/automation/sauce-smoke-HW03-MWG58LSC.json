@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG58LSC",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "sauce-smoke",
+    "started": "2026-11-14T15:28:23.245+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Máy Windows cục bộ",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localhost:8080",
+    "backend": "http://localhost:3000",
+    "viewport": null,
+    "locale": null,
+    "mode": "sauce-smoke",
+    "browser": "Safari 18.3",
+    "identityOverlay": false,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, thêm một đơn pending cho smoke test",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "fixture": {
+      "orders": 1,
+      "categories": [
+        "Điện thoại",
+        "Laptop",
+        "Phụ kiện"
+      ]
+    },
+    "smoke": {
+      "region": "eu-central",
+      "tunnelName": "hw03-task3",
+      "requestedPlatform": "macOS 14",
+      "requestedVersion": "18",
+      "status": "Blocked",
+      "checks": [
+        {
+          "name": "Proxy cục bộ",
+          "status": "Passed",
+          "observation": "GET /api/categories HTTP 200, 3 danh mục fixture.",
+          "elapsedMs": 13
+        },
+        {
+          "name": "Tài khoản và tunnel Ready",
+          "status": "Passed",
+          "observation": "hw03-task3: is_ready=true.",
+          "elapsedMs": 816
+        },
+        {
+          "name": "Khởi tạo phiên Safari/macOS",
+          "status": "Passed",
+          "observation": "Safari 18.3 · mac.",
+          "elapsedMs": 34074
+        },
+        {
+          "name": "Mở Web Admin qua tunnel",
+          "status": "Blocked",
+          "observation": "Không thấy Admin Login tại các origin đã thử: http://localhost:8080, http://localtest.me:8080.",
+          "elapsedMs": 21231
+        }
+      ],
+      "evidence": [],
+      "jobId": "71be65571f2042e5b7db41e19c2efd3d",
+      "actual": {
+        "browser": "Safari",
+        "version": "18.3",
+        "platform": "mac",
+        "platformVersion": "14.6"
+      },
+      "navigation": [
+        {
+          "expectedOrigin": "http://localhost:8080",
+          "observation": "TimeoutError",
+          "title": ""
+        },
+        {
+          "expectedOrigin": "http://localtest.me:8080",
+          "observation": "TimeoutError",
+          "title": ""
+        }
+      ],
+      "sessionClosed": true,
+      "sessionElapsedMs": 58197,
+      "sauceMetadata": {
+        "browser": "safari",
+        "browser_version": "18.",
+        "os": "Mac 14",
+        "status": "complete",
+        "record_video": true,
+        "proxied": false
+      },
+      "api": [],
+      "elapsedMs": 60382
+    },
+    "error": "Mở Web Admin qua tunnel: Không thấy Admin Login tại các origin đã thử: http://localhost:8080, http://localtest.me:8080.",
+    "finished": "2026-11-14T15:29:25.873+07:00"
+  },
+  "results": []
+}

@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG29YN0",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "firefox-windows",
+    "started": "2026-11-14T14:05:27.708+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Dell 15 DC15250",
+    "playwright": "1.62.1",
+    "node": "v24.22.1",
+    "frontend": "http://localhost:5174",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "headed",
+    "browser": "Firefox (Playwright build) 153.0",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 5174 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "platformEvidence": "evidence/firefox-windows/HW03-MWG29YN0/dashboard-window.png",
+    "finished": "2026-11-14T14:05:40.688+07:00"
+  },
+  "results": [
+    {
+      "id": "S-05",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "firefox-windows",
+      "preconditions": "Trình duyệt Chromium desktop ở 100%, khoảng 1440×900 CSS px.",
+      "testData": "Ba màn, điều hướng và thao tác chính.",
+      "issue": "",
+      "category": "MANUAL",
+      "status": "Blocked",
+      "timestamp": "2026-11-14T14:05:35.722+07:00",
+      "expected": "Nội dung và thao tác chính vẫn truy cập được; không có chồng lấn khiến thao tác bị che.",
+      "steps": [
+        "Đăng nhập GUI Admin bằng Enter và kiểm dữ liệu coupon mẫu hiện trên màn."
+      ],
+      "actual": "Command failed: powershell.exe -NoProfile -ExecutionPolicy Bypass -File D:\\eshop-sut\\HW03\\task3\\automation\\capture-window.ps1 -WindowTitle Task 3 HW03-MWG29YN0 -BrowserProcess firefox -OutputPath D:\\eshop-sut\\HW03\\task3\\evidence\\firefox-windows\\HW03-MWG29YN0\\unused.png -Zoom\nTask 3 window could not take focus.\r\nAt D:\\eshop-sut\\HW03\\task3\\automation\\capture-window.ps1:48 char:61\r\n+ ... Window() -ne $handle) { throw 'Task 3 window could not take focus.' }\r\n+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n    + CategoryInfo          : OperationStopped: (Task 3 window could not take focus.:String) [], RuntimeException\r\n    + FullyQualifiedErrorId : Task 3 window could not take focus.\r\n \r\n",
+      "notes": "Gián đoạn kỹ thuật hoặc bộ kiểm thử; cần chẩn đoán.",
+      "evidence": "",
+      "reference": "task3/automation/run.cjs#checkZoom#S-05"
+    }
+  ]
+}

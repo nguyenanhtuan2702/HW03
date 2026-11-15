@@ -1,0 +1,9 @@
+# Tránh commit chứng cứ nhạy cảm vào repo public
+recordings/
+*.mp4
+*.mov
+*.webm
+secrets/
+08_danh_sach_nguoi_tham_gia_RIENG_TU.md
+/07_danh_sach_nguoi_tham_gia_RIENG_TU.md
+/07_danh_sach_nguoi_tham_gia_NOP_MOODLE.md

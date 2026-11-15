@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "runId": "HW03-MWGFHBWF",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "safari-apple",
+    "started": "2026-11-14T20:15:06.495+07:00",
+    "os": "macOS 14.6",
+    "device": "Sauce Labs desktop VM, EU Central",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localtest.me:8080",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 823",
+    "locale": "en-US",
+    "mode": "webdriver",
+    "browser": "Safari 18.3",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "localFrontend": "http://127.0.0.1:8080",
+    "group": "shared, categories",
+    "requested": [
+      "S-06",
+      "C-16",
+      "C-20"
+    ],
+    "infrastructureEvidence": "automation/sauce-smoke-HW03-MWG5L5L2.json",
+    "tunnel": {
+      "region": "eu-central",
+      "name": "hw03-task3",
+      "preflight": "HTML và /api/categories qua proxy Sauce HTTP 200"
+    },
+    "jobId": "0d6aefc38bdf46078cebad2c73bc855c",
+    "sessionSetupMs": 36078,
+    "keyboard": "W3C WebDriver sends Tab without modifier; Safari VM keyboard-navigation preference was not changed.",
+    "sessionClosed": true,
+    "finished": "2026-11-14T20:16:31.812+07:00"
+  },
+  "results": [
+    {
+      "id": "S-06",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "ASSISTED",
+      "preconditions": "Chromium ở 100%, viewport 375×812 CSS px.",
+      "testData": "Dashboard, Danh mục, Mã giảm giá; một hàng thử mỗi bảng.",
+      "issue": "",
+      "timestamp": "2026-11-14T20:15:53.306+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "0d6aefc38bdf46078cebad2c73bc855c",
+      "expected": "Sau khi cuộn khi cần, có thể tiếp cận và hoàn thành thao tác chính trên ba màn ở 375 CSS px.",
+      "status": "Blocked",
+      "steps": [
+        "Khôi phục fixture Task 1/3 và tải lại Dashboard qua Safari.",
+        "Đo viewport CSS thực bằng WebDriver trước khi chấm."
+      ],
+      "actual": "Không nhận được sự kiện response.",
+      "notes": "Gián đoạn WebDriver hoặc bộ kiểm.",
+      "evidence": "evidence/safari-apple/HW03-MWGFHBWF/S-06.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-16",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox đã tải Danh mục; ngắt kết nối phiên trình duyệt.",
+      "testData": "Tên hợp lệ duy nhất.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/168",
+      "timestamp": "2026-11-14T20:16:02.186+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "0d6aefc38bdf46078cebad2c73bc855c",
+      "expected": "UI báo thao tác thất bại dễ hiểu và có hướng sửa/thử lại; tên chưa được tạo.",
+      "status": "Failed",
+      "steps": [
+        "Khôi phục fixture Task 1/3 và tải lại Dashboard qua Safari.",
+        "Mở Danh mục.",
+        "Ngắt riêng kết nối POST /api/categories ở trình duyệt, thực hiện thao tác GUI và đọc sự kiện hộp thoại.",
+        "Proxy sandbox chuyển đúng request sang cổng bị trình duyệt chặn. Đối chiếu thông báo GUI và xác nhận request không đến backend."
+      ],
+      "actual": "GUI chỉ hiện “Lỗi thêm DM: Network Error”, không cho biết cách khôi phục. Form vẫn giữ tên đã nhập.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWGFHBWF/C-16.png",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi thêm DM: Network Error",
+          "action": "dismiss"
+        }
+      ],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "effect": "sandbox-redirect-to-browser-blocked-port",
+          "backendReached": false
+        }
+      ]
+    },
+    {
+      "id": "C-20",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Hàng thử tồn tại; có thể ngắt kết nối trình duyệt sau khi tải.",
+      "testData": "Tên/ID của hàng thử.",
+      "issue": "",
+      "timestamp": "2026-11-14T20:16:11.405+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "0d6aefc38bdf46078cebad2c73bc855c",
+      "expected": "UI báo xóa thất bại và hàng còn nguyên, không thể hiện thành công.",
+      "status": "Passed",
+      "steps": [
+        "Khôi phục fixture Task 1/3 và tải lại Dashboard qua Safari.",
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWGFHBWF-C-20\" rồi gửi form bằng nút Thêm mới.",
+        "Ngắt riêng kết nối DELETE /api/categories/4 ở trình duyệt, thực hiện thao tác GUI và đọc sự kiện hộp thoại.",
+        "Proxy sandbox chuyển đúng request sang cổng bị trình duyệt chặn. Đối chiếu thông báo GUI và xác nhận request không đến backend."
+      ],
+      "actual": "GUI hiện hộp thoại “Lỗi xóa DM: Network Error” và giữ dòng #4.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWGFHBWF/C-20.png",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi xóa DM: Network Error",
+          "action": "dismiss"
+        }
+      ],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/categories/4",
+          "effect": "sandbox-redirect-to-browser-blocked-port",
+          "backendReached": false
+        }
+      ]
+    }
+  ]
+}

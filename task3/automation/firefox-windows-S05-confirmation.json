@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "runId": "HW03-firefox-S05-confirmation",
+    "platform": "firefox-windows",
+    "mode": "student-manual",
+    "started": "2026-11-14T21:08:50+07:00",
+    "finished": "2026-11-14T21:08:50+07:00",
+    "source": "Xác nhận của sinh viên trong cuộc trò chuyện. Trường started và finished ghi thời điểm lưu xác nhận, thời điểm thực thi không được cung cấp.",
+    "browser": "Firefox (mở thủ công, chưa ghi phiên bản)",
+    "os": "Windows",
+    "relatedRun": "automation/firefox-windows-HW03-MWG2TU2T.json"
+  },
+  "results": [
+    {
+      "id": "S-05",
+      "status": "Passed",
+      "steps": ["Sinh viên mở Firefox và thực hiện ca zoom 200% thủ công."],
+      "actual": "Sinh viên xác nhận kiểm thủ công cho kết quả đạt. Không có ảnh riêng của lượt này.",
+      "notes": "Passed theo xác nhận của sinh viên. Không có ảnh riêng."
+    }
+  ]
+}

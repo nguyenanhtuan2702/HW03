@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "runId": "HW03-MWGGKOQX",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "safari-apple",
+    "started": "2026-11-14T20:45:42.729+07:00",
+    "browser": "Safari 18 (bản chọn trong Live, chưa xác minh số hiệu phụ)",
+    "os": "macOS 14 (bản chọn trong Live, chưa xác minh số hiệu phụ)",
+    "device": "Sauce Labs Live desktop VM",
+    "mode": "sauce-live-manual",
+    "frontend": "https://localtest.me:8443/",
+    "tunnel": "hw03-task3",
+    "region": "eu-central",
+    "jobId": null,
+    "sandboxLog": "automation/safari-live-windows-HW03-MWGGKOQX.json",
+    "source": "Quan sát và ảnh do sinh viên cung cấp. Thời điểm nhận ảnh theo máy Windows. Chưa có job ID của phiên Live."
+  },
+  "results": [
+    {
+      "id": "S-05",
+      "status": "Blocked",
+      "timestamp": "2026-11-14T21:00:22+07:00",
+      "steps": ["Sinh viên mở Dashboard trong Safari và báo giao diện bình thường sau khi phóng to."],
+      "actual": "Ảnh Dashboard sau khi phóng to cho thấy hai thẻ chỉ số vẫn đọc được. Ảnh không hiển thị mức zoom và chưa có quan sát thao tác trên Danh mục hoặc Mã Giảm Giá.",
+      "notes": "Đã kiểm một phần. Thiếu xác nhận mức zoom 200% và hai màn còn lại.",
+      "evidence": "evidence/safari-apple/HW03-MWGGKOQX/S-05-dashboard.png"
+    },
+    {
+      "id": "S-06",
+      "status": "Failed",
+      "timestamp": "2026-11-14T21:00:22+07:00",
+      "steps": [
+        "Mở https://localtest.me:8443/__hw03_live_375 trong Safari Live. Khung hiển thị 375 × 812 CSS px.",
+        "Đăng nhập, mở Mã Giảm Giá và quan sát các trường của form Tạo mã giảm giá mới.",
+        "Sinh viên báo không thể thao tác với các trường bị ép hẹp. Lượt này không hoàn tất tạo, xem hoặc xóa mã thử."
+      ],
+      "actual": "Tại 375 × 812 CSS px, thanh bên chiếm phần lớn chiều rộng. Các ô trên form Mã Giảm Giá bị ép rất hẹp và sinh viên không thể hoàn tất tạo mã.",
+      "notes": "Form Mã Giảm Giá bị ép hẹp ở 375 CSS px. Sinh viên không hoàn tất được tạo mã trong Safari Live.",
+      "evidence": "evidence/safari-apple/HW03-MWGGKOQX/S-06-coupon-form.png",
+      "supportingEvidence": [
+        "evidence/safari-apple/HW03-MWGGKOQX/S-06-viewport.png",
+        "evidence/safari-apple/HW03-MWGFLFKB/S-06.png"
+      ],
+      "relatedRun": "automation/safari-apple-HW03-MWGFLFKB.json"
+    }
+  ]
+}

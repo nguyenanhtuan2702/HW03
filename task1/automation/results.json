@@ -1,0 +1,1271 @@
+{
+  "metadata": {
+    "runId": "HW03-MW9D83SL",
+    "started": "2026-11-09T21:37:35.393+07:00",
+    "browser": "Chrome 156.0.8078.81",
+    "playwright": "1.62.1",
+    "os": "Windows_NT 10.0.26300",
+    "node": "v24.15.0",
+    "frontend": "http://localhost:5174",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "headless",
+    "database": "Fresh fixture database from unchanged copied backend source",
+    "finished": "2026-11-09T21:38:59.785+07:00"
+  },
+  "results": [
+    {
+      "id": "C-01",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:35.407+07:00",
+      "expected": "Có tiêu đề hiển thị rõ nội dung quản lý danh mục.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Tiêu đề “Quản lý Danh mục” xuất hiện.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-01"
+    },
+    {
+      "id": "C-02",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:36.252+07:00",
+      "expected": "Các cột ID, tên và thao tác có nhãn dễ hiểu tương ứng dữ liệu.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Ba cột ID, Tên Danh Mục, Hành động hiển thị cùng dòng Điện thoại.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-02"
+    },
+    {
+      "id": "C-03",
+      "screen": "Categories",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:37.316+07:00",
+      "expected": "Tên có thể xem đầy đủ hoặc đọc qua phương thức rõ ràng; nút Xóa vẫn truy cập được và không bị che.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-03 DANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀI\" rồi gửi form bằng nút Thêm mới.",
+        "Cuộn tới nút Xóa để phân biệt tràn có thể cuộn với điều khiển bị cắt."
+      ],
+      "actual": "Nút Xóa cùng dòng tên dài hiện đầy đủ sau khi cuộn ở viewport 1440 px. Cần xác nhận khả năng đọc tên theo cách cuộn thực tế.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-03"
+    },
+    {
+      "id": "C-04",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:38.340+07:00",
+      "expected": "Ô có nhãn thấy được và tên truy cập có thể nhận diện sau khi nhập.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Kiểm tra nhãn hiển thị, label liên kết và thuộc tính aria của trường tên."
+      ],
+      "actual": "Ô tên chỉ có placeholder “Tên danh mục mới”, không có nhãn hiển thị cố định hoặc label liên kết.",
+      "notes": "",
+      "evidence": "evidence/C-04.png",
+      "reference": "automation/shared-categories.cjs#C-04"
+    },
+    {
+      "id": "C-05",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:38.980+07:00",
+      "expected": "Có dấu * bên cạnh nhãn trường bắt buộc.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Đọc phần chữ hiển thị của form thêm danh mục."
+      ],
+      "actual": "Form thêm danh mục không có nhãn tên kèm dấu *.",
+      "notes": "",
+      "evidence": "evidence/C-05.png",
+      "reference": "automation/shared-categories.cjs#C-05"
+    },
+    {
+      "id": "C-06",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:39.602+07:00",
+      "expected": "Không tạo hàng tên rỗng; giao diện chỉ rõ tên là bắt buộc.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập \"\" và bấm Thêm mới."
+      ],
+      "actual": "Tên \"\" được lưu. Dòng #5 xuất hiện với ô tên \"\".",
+      "notes": "",
+      "evidence": "evidence/C-06.png",
+      "reference": "automation/shared-categories.cjs#C-06"
+    },
+    {
+      "id": "C-07",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:40.580+07:00",
+      "expected": "Tên không có ký tự nhìn thấy bị từ chối và người dùng biết cần sửa tên.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập \"   \" và bấm Thêm mới."
+      ],
+      "actual": "Tên \"   \" được lưu. Dòng #6 xuất hiện với ô tên \"   \".",
+      "notes": "",
+      "evidence": "evidence/C-07.png",
+      "reference": "automation/shared-categories.cjs#C-07"
+    },
+    {
+      "id": "C-08",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:41.629+07:00",
+      "expected": "Chữ có dấu và dấu gạch hiển thị đúng nội dung đã nhập.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-08 Đồ dùng học tập – thử nghiệm\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Dòng mới hiển thị đúng chữ tiếng Việt, dấu và ký tự gạch.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-08"
+    },
+    {
+      "id": "C-09",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:42.432+07:00",
+      "expected": "Ký tự <b> và </b> hiển thị như văn bản; không tạo phần tử b từ tên.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"<b>HW03-MW9D83SL-C-09</b>\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Chuỗi <b>…</b> xuất hiện nguyên văn, không tạo phần tử HTML b.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-09"
+    },
+    {
+      "id": "C-10",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:43.115+07:00",
+      "expected": "Tạo đúng một danh mục giống thao tác nút Thêm mới.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-10\" rồi gửi form bằng Enter."
+      ],
+      "actual": "Enter gửi form và dòng #9 xuất hiện.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-10"
+    },
+    {
+      "id": "C-11",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:44.118+07:00",
+      "expected": "Form thêm và bảng Danh mục xuất hiện.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Từ Dashboard, mục Danh mục mở đúng form và bảng.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-11"
+    },
+    {
+      "id": "C-12",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:45.299+07:00",
+      "expected": "Cùng tên và ID còn xuất hiện sau chuyển tab và tải lại.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-12\" rồi gửi form bằng nút Thêm mới.",
+        "Mở menu Dashboard.",
+        "Mở menu Danh mục.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Dòng #10 vẫn xuất hiện khi quay lại và sau reload.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-12"
+    },
+    {
+      "id": "C-13",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:46.961+07:00",
+      "expected": "Giao diện phản hồi thành công dễ nhận biết qua cập nhật nhìn thấy được hoặc thông báo có ý nghĩa.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-13\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Dòng #11 xuất hiện ngay và trường tên được dọn trống.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-13"
+    },
+    {
+      "id": "C-14",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:48.196+07:00",
+      "expected": "Bảng chứa đúng một hàng mới có tên vừa nhập.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-14\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Một lần gửi form tạo đúng một dòng có tên duy nhất.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-14"
+    },
+    {
+      "id": "C-15",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:49.443+07:00",
+      "expected": "Một ý định tạo dẫn đến tối đa một bản ghi khi bấm lặp trong lúc đang xử lý.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Giữ POST đầu ở Playwright, bấm Thêm mới lần nữa khi form còn chờ, rồi cho các yêu cầu thật đi tiếp.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Hai lần bấm trong lúc chờ tạo 2 dòng cùng tên. Ghi nhận 2 yêu cầu POST.",
+      "notes": "",
+      "evidence": "evidence/C-15.png",
+      "reference": "automation/shared-categories.cjs#C-15"
+    },
+    {
+      "id": "C-16",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:51.221+07:00",
+      "expected": "UI báo thao tác thất bại dễ hiểu và có hướng sửa/thử lại; tên chưa được tạo.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Ngắt riêng kết nối POST /api/categories ở trình duyệt, thực hiện thao tác GUI và đọc sự kiện hộp thoại."
+      ],
+      "actual": "GUI chỉ hiện “Lỗi thêm DM: Network Error”, không cho biết cách khôi phục. Form vẫn giữ tên đã nhập.",
+      "notes": "",
+      "evidence": "evidence/C-16.png",
+      "reference": "automation/shared-categories.cjs#C-16",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi thêm DM: Network Error"
+        }
+      ]
+    },
+    {
+      "id": "C-17",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:52.526+07:00",
+      "expected": "Có bước xác nhận rõ đối tượng hoặc cơ hội an toàn tương đương trước khi xóa.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-17\" rồi gửi form bằng nút Thêm mới.",
+        "Bấm Xóa một lần, chờ bảng phản ánh thao tác và theo dõi yêu cầu DELETE/hộp thoại."
+      ],
+      "actual": "Một lần bấm Xóa gửi DELETE và làm mất dòng #15 ngay. Không có hộp thoại xác nhận.",
+      "notes": "",
+      "evidence": "evidence/C-17.png",
+      "reference": "automation/shared-categories.cjs#C-17"
+    },
+    {
+      "id": "C-18",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Blocked",
+      "timestamp": "2026-11-09T21:37:54.291+07:00",
+      "expected": "Danh mục vẫn tồn tại và không gửi lệnh xóa.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-18\" rồi gửi form bằng nút Thêm mới.",
+        "Tìm hộp thoại xác nhận để chọn Hủy sau khi bấm Xóa."
+      ],
+      "actual": "Không có bước xác nhận để chọn Hủy. Xem C-17.",
+      "notes": "Thiếu tiền điều kiện kiểm thử.",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-18"
+    },
+    {
+      "id": "C-19",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:55.537+07:00",
+      "expected": "Chỉ hàng mục tiêu biến mất; các hàng khác giữ nguyên.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-19\" rồi gửi form bằng nút Thêm mới.",
+        "Nhấn Xóa trên đúng dòng #17 và theo dõi bảng."
+      ],
+      "actual": "Chỉ dòng #17 biến mất, các dòng còn lại giữ nguyên.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-19"
+    },
+    {
+      "id": "C-20",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:56.979+07:00",
+      "expected": "UI báo xóa thất bại và hàng còn nguyên, không thể hiện thành công.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Nhập tên \"HW03-MW9D83SL-C-20\" rồi gửi form bằng nút Thêm mới.",
+        "Ngắt riêng kết nối DELETE /api/categories/18 ở trình duyệt, thực hiện thao tác GUI và đọc sự kiện hộp thoại."
+      ],
+      "actual": "GUI hiện hộp thoại “Lỗi xóa DM: Network Error” và giữ dòng #18.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#C-20",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi xóa DM: Network Error"
+        }
+      ]
+    },
+    {
+      "id": "C-21",
+      "screen": "Categories",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:37:58.257+07:00",
+      "expected": "Có thông báo không có danh mục, người dùng nhận biết có thể thêm mới.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Làm rỗng danh mục trong DB dùng riêng, tải lại thật rồi mở Danh mục.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Danh mục rỗng có 0 dòng và 0 thông báo trạng thái rỗng. GUI chỉ hiện form và đầu bảng.",
+      "notes": "",
+      "evidence": "evidence/C-21.png",
+      "reference": "automation/shared-categories.cjs#C-21"
+    },
+    {
+      "id": "P-01",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:37:59.622+07:00",
+      "expected": "Có tiêu đề rõ đây là quản lý mã giảm giá.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá."
+      ],
+      "actual": "View hiển thị tiêu đề “Quản lý Mã Giảm Giá”.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-01"
+    },
+    {
+      "id": "P-02",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:00.644+07:00",
+      "expected": "Nhãn đầy đủ, dễ phân biệt và đúng thứ tự dữ liệu.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Đọc các tiêu đề cột: Mã | Loại | Giá trị | Đơn tối thiểu | Hết hạn | Giới hạn/người | Hành động."
+      ],
+      "actual": "Bảng có đủ bảy nhãn cột theo thứ tự mã, loại, giá trị, đơn tối thiểu, hạn, lượt và hành động.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-02"
+    },
+    {
+      "id": "P-03",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:01.728+07:00",
+      "expected": "Percent có %, tiền cố định có ₫ và phân nhóm hàng nghìn.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Đọc giá trị hai mã seed: SAVE10 “10%”, BIGBUY “50.000 ₫”."
+      ],
+      "actual": "Coupon phần trăm hiển thị 10%, coupon cố định hiển thị 50.000 ₫ có phân nhóm nghìn và ký hiệu ₫.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-03"
+    },
+    {
+      "id": "P-04",
+      "screen": "Coupons",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:02.774+07:00",
+      "expected": "Sáu trường và nút không chồng nhau hoặc bị cắt khỏi vùng có thể tiếp cận.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Đo kích thước sáu trường và nút Tạo mã ở 1280×900 CSS px.",
+        "Đo kích thước sáu trường và nút Tạo mã ở 1024×900 CSS px.",
+        "Đo kích thước sáu trường và nút Tạo mã ở 768×900 CSS px."
+      ],
+      "actual": "Sáu trường và nút Tạo mã đều nằm trong viewport và không chồng nhau ở 1280, 1024 và 768 CSS px.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-04"
+    },
+    {
+      "id": "P-05",
+      "screen": "Coupons",
+      "category": "ASSISTED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:03.972+07:00",
+      "expected": "Mỗi trường có nhãn nhận diện được sau khi nhập và tên truy cập phù hợp.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Kiểm tra nhãn liên kết bền vững của sáu điều khiển: 6 điều khiển không có label/aria-label/aria-labelledby."
+      ],
+      "actual": "Các điều khiển không có nhãn bền vững: Mã coupon (VD: SAVE10), SELECT, Giá trị % (VD: 10), Đơn tối thiểu (₫), Ngày hết hạn, Số lần dùng tối đa/người. Placeholder hoặc lựa chọn hiện tại không thay thế nhãn.",
+      "notes": "",
+      "evidence": "evidence/P-05.png",
+      "reference": "automation/coupon-dashboard.cjs#P-05"
+    },
+    {
+      "id": "P-06",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:05.211+07:00",
+      "expected": "Mỗi trường bắt buộc có dấu * cạnh nhãn.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Quan sát nội dung form và dấu * bên cạnh nhãn: \"Tạo mã giảm giá mới\\nPhần trăm (%)\\nSố tiền cố định (₫)\\nTạo mã\"."
+      ],
+      "actual": "Form không gắn dấu * cạnh nhãn cho các trường bắt buộc FR-17: code, type, value, minimum, date, uses.",
+      "notes": "",
+      "evidence": "evidence/P-06.png",
+      "reference": "automation/coupon-dashboard.cjs#P-06"
+    },
+    {
+      "id": "P-07",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:06.516+07:00",
+      "expected": "Không tạo mã rỗng; người dùng được hướng dẫn nhập mã.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "Validation của trình duyệt tại Mã coupon (VD: SAVE10): Please fill out this field."
+      ],
+      "actual": "Trình duyệt chặn mã coupon rỗng tại “Mã coupon (VD: SAVE10)”: Please fill out this field.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-07"
+    },
+    {
+      "id": "P-08",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:07.885+07:00",
+      "expected": "Mã trùng bị từ chối; phản hồi chỉ rõ mã đã tồn tại.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MW9D83SL-P-08-DUP.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-08-DUP\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 500."
+      ],
+      "actual": "Mã HW03-MW9D83SL-P-08-DUP được giữ một bản ghi, nhưng thông báo giao diện là “Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code” thay vì giải thích rõ mã đã tồn tại.",
+      "notes": "",
+      "evidence": "evidence/P-08.png",
+      "reference": "automation/coupon-dashboard.cjs#P-08",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code"
+        }
+      ]
+    },
+    {
+      "id": "P-09",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:09.701+07:00",
+      "expected": "Mã xuất hiện sau lưu trùng với dạng đã thấy ngay trước gửi; không biến đổi ngầm giữa hai màn.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"hw03-mw9d83sl-p-09-case\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Nhập “hw03-mw9d83sl-p-09-case”; form hiển thị “HW03-MW9D83SL-P-09-CASE” trước khi gửi và bảng lưu cùng chuỗi.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-09"
+    },
+    {
+      "id": "P-10",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:11.098+07:00",
+      "expected": "Hai loại phân biệt được và trường giá trị hiển thị đơn vị/hint tương ứng.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Đổi loại: Phần trăm (%) → Giá trị % (VD: 10); Số tiền cố định (₫) → Số tiền (VD: 50000)."
+      ],
+      "actual": "Dropdown phân biệt phần trăm và số tiền cố định, gợi ý của trường giá trị đổi tương ứng.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-10"
+    },
+    {
+      "id": "P-11",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:12.252+07:00",
+      "expected": "Không tạo coupon giá trị 0; có hướng dẫn phù hợp.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-11-GUI\",\"type\":\"percent\",\"value\":\"0\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Form chấp nhận giá trị giảm 0 và POST trả HTTP 200, mã HW03-MW9D83SL-P-11-GUI xuất hiện trong bảng.",
+      "notes": "",
+      "evidence": "evidence/P-11.png",
+      "reference": "automation/coupon-dashboard.cjs#P-11"
+    },
+    {
+      "id": "P-12",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:13.795+07:00",
+      "expected": "Không tạo coupon giá trị âm; có hướng dẫn phù hợp.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-12-GUI\",\"type\":\"percent\",\"value\":\"-10\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Form chấp nhận giá trị giảm -10 và POST trả HTTP 200, mã HW03-MW9D83SL-P-12-GUI xuất hiện trong bảng.",
+      "notes": "",
+      "evidence": "evidence/P-12.png",
+      "reference": "automation/coupon-dashboard.cjs#P-12"
+    },
+    {
+      "id": "P-13",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:15.303+07:00",
+      "expected": "Không tạo coupon với đơn tối thiểu dưới 0.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-13-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"-1\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Form chấp nhận đơn tối thiểu -1 ₫ và POST trả HTTP 200, mã HW03-MW9D83SL-P-13-GUI xuất hiện trong bảng.",
+      "notes": "",
+      "evidence": "evidence/P-13.png",
+      "reference": "automation/coupon-dashboard.cjs#P-13"
+    },
+    {
+      "id": "P-14",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:16.814+07:00",
+      "expected": "Không tạo coupon với số lượt dưới 1; giá trị 0 bị báo không hợp lệ.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-14-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"0\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "Validation của trình duyệt tại Số lần dùng tối đa/người: Value must be greater than or equal to 1."
+      ],
+      "actual": "Trình duyệt chặn giới hạn 0 lượt tại “Số lần dùng tối đa/người”: Value must be greater than or equal to 1.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-14"
+    },
+    {
+      "id": "P-15",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:18.018+07:00",
+      "expected": "Không tạo coupon thiếu ngày; thông báo yêu cầu ngày.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-15-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "Validation của trình duyệt tại Ngày hết hạn: Please fill out this field."
+      ],
+      "actual": "Trình duyệt chặn ngày hết hạn để trống tại “Ngày hết hạn”: Please fill out this field.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-15"
+    },
+    {
+      "id": "P-16",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:19.148+07:00",
+      "expected": "Trường nhận focus, ngày có thể nhập/chọn bằng phím và focus có thể rời trường.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Tab vào trường ngày và bấm ArrowDown: 2099-12-31 → 2099-12-30."
+      ],
+      "actual": "Tab vào được trường ngày, bàn phím đổi giá trị thành 2099-12-30, sau đó Tab sang giới hạn lượt dùng.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-16"
+    },
+    {
+      "id": "P-17",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:20.401+07:00",
+      "expected": "Form tạo và bảng mã giảm giá xuất hiện.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Dashboard.",
+        "Mở menu Mã Giảm Giá."
+      ],
+      "actual": "Bấm menu Mã Giảm Giá từ Dashboard mở đúng tiêu đề, form tạo mã và bảng coupon.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-17"
+    },
+    {
+      "id": "P-18",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:21.472+07:00",
+      "expected": "Focus đi qua sáu trường theo trật tự nhìn rồi tới Tạo mã.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Trình tự Tab: code → type → value → minimum → date → uses → submit. Gộp các segment lặp liền nhau của ô date."
+      ],
+      "actual": "Focus đi qua sáu trường rồi đến Tạo mã đúng thứ tự: code → type → value → minimum → date → uses → submit.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-18"
+    },
+    {
+      "id": "P-19",
+      "screen": "Coupons",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:22.538+07:00",
+      "expected": "Thành công dễ nhận ra qua phản hồi rõ hoặc thay đổi nhìn thấy được; reset im lặng chưa đủ.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-19-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200.",
+        "Quan sát phản hồi ngay sau tạo: có thông báo=false, mã mới nằm trong vùng nhìn=true."
+      ],
+      "actual": "Mã HW03-MW9D83SL-P-19-GUI xuất hiện ngay trong vùng nhìn sau khi tạo, không cần cuộn. Form không hiện thông báo thành công riêng.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-19"
+    },
+    {
+      "id": "P-20",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:23.940+07:00",
+      "expected": "Một hàng mới chứa mã và các trường đúng dữ liệu đã gửi.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-20-GUI\",\"type\":\"fixed\",\"value\":\"12345\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200.",
+        "Hàng mới: HW03-MW9D83SL-P-20-GUI | Cố định | 12.345 ₫ | 20.000 ₫ | 2099-12-31 | 2 lần | Xóa."
+      ],
+      "actual": "Coupon HW03-MW9D83SL-P-20-GUI xuất hiện đúng một lần với loại cố định, giá trị 12.345 ₫, tối thiểu 20.000 ₫, hạn 2099-12-31, giới hạn 2 lượt.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-20"
+    },
+    {
+      "id": "P-21",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:25.377+07:00",
+      "expected": "Thông báo lỗi hiển thị trong giao diện phía trên nút Tạo mã.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MW9D83SL-P-21-ERR.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MW9D83SL-P-21-ERR\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 500."
+      ],
+      "actual": "Tạo mã trùng trả HTTP 500. Sau khi đóng hộp thoại “Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code”, form không hiển thị thông báo lỗi phía trên nút Tạo mã.",
+      "notes": "",
+      "evidence": "evidence/P-21.png",
+      "reference": "automation/coupon-dashboard.cjs#P-21",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code"
+        }
+      ]
+    },
+    {
+      "id": "P-22",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:27.135+07:00",
+      "expected": "Có bước xác nhận rõ đối tượng hoặc cơ hội an toàn trước khi xóa.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MW9D83SL-P-22-CONFIRM.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá.",
+        "Bấm Xóa tại hàng HW03-MW9D83SL-P-22-CONFIRM và hủy xác nhận nếu có.",
+        "DELETE trả HTTP 200 và hàng HW03-MW9D83SL-P-22-CONFIRM biến mất khỏi bảng."
+      ],
+      "actual": "Bấm Xóa một lần đã xóa HW03-MW9D83SL-P-22-CONFIRM và cập nhật bảng, không có hộp thoại xác nhận.",
+      "notes": "",
+      "evidence": "evidence/P-22.png",
+      "reference": "automation/coupon-dashboard.cjs#P-22"
+    },
+    {
+      "id": "P-23",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Blocked",
+      "timestamp": "2026-11-09T21:38:28.748+07:00",
+      "expected": "Mã còn và không gửi DELETE.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MW9D83SL-P-23-CANCEL.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá.",
+        "Bấm Xóa tại hàng HW03-MW9D83SL-P-23-CANCEL và hủy xác nhận nếu có.",
+        "DELETE trả HTTP 200 và hàng HW03-MW9D83SL-P-23-CANCEL biến mất khỏi bảng."
+      ],
+      "actual": "Không có hộp thoại xác nhận để thực hiện thao tác Hủy (xem P-22).",
+      "notes": "Thiếu tiền điều kiện kiểm thử.",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-23"
+    },
+    {
+      "id": "P-24",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:30.288+07:00",
+      "expected": "Chỉ mã mục tiêu biến mất.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MW9D83SL-P-24-DELETE.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá.",
+        "Bấm Xóa tại hàng HW03-MW9D83SL-P-24-DELETE và chấp nhận xác nhận nếu có.",
+        "DELETE trả HTTP 200 và hàng HW03-MW9D83SL-P-24-DELETE biến mất khỏi bảng.",
+        "Trước xóa có 5 hàng, sau xóa có 4 hàng."
+      ],
+      "actual": "Đúng hàng HW03-MW9D83SL-P-24-DELETE biến mất; 4 mã khác giữ nguyên.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-24"
+    },
+    {
+      "id": "P-25",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:31.839+07:00",
+      "expected": "Trạng thái hết hạn hoặc ngày hiển thị giúp phân biệt đúng mã hết hạn với mã còn hạn.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MW9D83SL-P-25-EXPIRED.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá.",
+        "Coupon thử hạn 2020-01-01 hiện “Hết hạn”; SAVE10 hiện “2099-12-31”."
+      ],
+      "actual": "Mã hết hạn ngày 2020-01-01 hiển thị “Hết hạn”; mã còn hạn hiển thị ngày 2099-12-31.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#P-25"
+    },
+    {
+      "id": "P-26",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:33.139+07:00",
+      "expected": "Có thông báo danh sách rỗng dễ phân biệt với lỗi tải.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá.",
+        "Danh sách coupon rỗng trên sandbox: 0 hàng; trạng thái rỗng hiển thị: false."
+      ],
+      "actual": "Sau khi dữ liệu tải xong, bảng coupon có 0 hàng nhưng không có thông báo danh sách rỗng.",
+      "notes": "",
+      "evidence": "evidence/P-26.png",
+      "reference": "automation/coupon-dashboard.cjs#P-26"
+    },
+    {
+      "id": "D-09",
+      "screen": "Dashboard",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:34.456+07:00",
+      "expected": "Doanh thu và số đơn bằng 0, không hiển thị NaN hoặc undefined.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "API xác nhận 0 đơn; đọc hai thẻ Dashboard: [\"0 ₫\",\"0\"]."
+      ],
+      "actual": "Dữ liệu đã tải, 0 đơn hàng và 0 ₫ hiển thị đúng khi API trả danh sách rỗng.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#D-09"
+    },
+    {
+      "id": "D-01",
+      "screen": "Dashboard",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:35.414+07:00",
+      "expected": "Có nhãn nhận diện tổng doanh thu và tổng số đơn hàng.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Đọc hai nhãn thẻ thống kê trên Dashboard."
+      ],
+      "actual": "Hai nhãn đang hiển thị: Tổng doanh thu (Delivered) và Tổng số đơn hàng.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#D-01"
+    },
+    {
+      "id": "D-02",
+      "screen": "Dashboard",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:36.354+07:00",
+      "expected": "Giá trị dùng ký hiệu ₫ và dấu phân tách hàng nghìn theo locale trình duyệt.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Dữ liệu thử qua API: đơn #1, 1234567 ₫, delivered.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Đọc nguyên văn giá trị doanh thu: “2.469.134 ₫”."
+      ],
+      "actual": "Doanh thu 2.469.134 ₫ có dấu phân nhóm hàng nghìn và ký hiệu ₫. Giá trị số được đối chiếu riêng tại D-07.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#D-02"
+    },
+    {
+      "id": "D-03",
+      "screen": "Dashboard",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:37.676+07:00",
+      "expected": "Giá trị hiển thị dạng số nguyên không kèm đơn vị tiền.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Đọc nguyên văn Tổng số đơn hàng: “0”."
+      ],
+      "actual": "Tổng số đơn hàng hiển thị số nguyên 0, không có ký hiệu tiền.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#D-03"
+    },
+    {
+      "id": "D-04",
+      "screen": "Dashboard",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:38.700+07:00",
+      "expected": "Hai thẻ không đè nhau; nhãn và giá trị đầy đủ.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Đo khung nội dung và vị trí hai thẻ ở viewport 1280×800 CSS px.",
+        "Đo khung nội dung và vị trí hai thẻ ở viewport 1024×768 CSS px."
+      ],
+      "actual": "Hai thẻ không chồng hoặc tràn ở viewport 1280×800 và 1024×768 CSS px tại zoom mặc định.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#D-04"
+    },
+    {
+      "id": "D-05",
+      "screen": "Dashboard",
+      "category": "ASSISTED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:39.894+07:00",
+      "expected": "Hậu tố nếu có diễn đạt trạng thái giao thành công dễ hiểu, ưu tiên nhãn “Đã giao”.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Đọc nhãn doanh thu “Tổng doanh thu (Delivered)”."
+      ],
+      "actual": "Nhãn “Tổng doanh thu (Delivered)” dùng “Delivered” cho trạng thái đã giao, trong khi các nhãn trạng thái dành cho người dùng tiếng Việt.",
+      "notes": "",
+      "evidence": "evidence/D-05.png",
+      "reference": "automation/coupon-dashboard.cjs#D-05"
+    },
+    {
+      "id": "D-06",
+      "screen": "Dashboard",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:41.024+07:00",
+      "expected": "Nội dung Dashboard và hai thẻ thống kê xuất hiện.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Mở menu Dashboard."
+      ],
+      "actual": "Từ Danh mục, bấm Dashboard và thấy đúng tiêu đề cùng hai thẻ thống kê.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#D-06"
+    },
+    {
+      "id": "D-07",
+      "screen": "Dashboard",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:42.156+07:00",
+      "expected": "Doanh thu bằng tổng total_amount của các đơn delivered.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Dữ liệu thử qua API: đơn #2, 246810 ₫, delivered.",
+        "Dữ liệu thử qua API: đơn #3, 135790 ₫, pending.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Đối chiếu tổng các đơn delivered = 246810 ₫ với giá trị Dashboard “493.620 ₫”."
+      ],
+      "actual": "Dashboard hiển thị 493.620 ₫; tổng đối chiếu của riêng đơn đã giao là 246810 ₫.",
+      "notes": "",
+      "evidence": "evidence/D-07.png",
+      "reference": "automation/coupon-dashboard.cjs#D-07"
+    },
+    {
+      "id": "D-08",
+      "screen": "Dashboard",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:43.602+07:00",
+      "expected": "Tổng số bằng số đơn tồn tại của mọi trạng thái.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Dữ liệu thử qua API: đơn #4, 195000 ₫, pending.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Đối chiếu Tổng số đơn hàng “1” với 1 đơn mà API liệt kê."
+      ],
+      "actual": "Dashboard hiển thị 1, khớp 1 đơn của tập dữ liệu.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/coupon-dashboard.cjs#D-08"
+    },
+    {
+      "id": "D-10",
+      "screen": "Dashboard",
+      "category": "ASSISTED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:44.819+07:00",
+      "expected": "Có dấu hiệu đang tải hoặc trạng thái tạm đủ rõ để tránh hiểu nhầm là số 0 đã tải.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Giữ yêu cầu GET đơn hàng thực tại biên trình duyệt, quan sát Dashboard khi phản hồi còn chờ. Không thay thế nội dung phản hồi."
+      ],
+      "actual": "Khi GET đơn hàng chưa được chuyển đi, giao diện đã hiển thị 0 ₫ và 0 và không có trạng thái đang tải nhận biết được.",
+      "notes": "",
+      "evidence": "evidence/D-10.png",
+      "reference": "automation/coupon-dashboard.cjs#D-10"
+    },
+    {
+      "id": "S-01",
+      "screen": "Shared",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:46.208+07:00",
+      "expected": "Giao diện dùng tiếng Việt nhất quán, ngoại trừ thuật ngữ kỹ thuật chuẩn.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Dashboard.",
+        "Mở menu Danh mục.",
+        "Mở menu Mã Giảm Giá.",
+        "Đọc ba tiêu đề và các nút thao tác trong phạm vi. Tách riêng nhãn Delivered (D-05)."
+      ],
+      "actual": "Tiêu đề: Dashboard; Quản lý Danh mục; Quản lý Mã Giảm Giá. Nhãn thao tác tiếng Việt; Dashboard được giữ như thuật ngữ quản trị, cần người review xác nhận ngoại lệ.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#S-01"
+    },
+    {
+      "id": "S-02",
+      "screen": "Shared",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:47.357+07:00",
+      "expected": "Nút hành động tích cực màu xanh dương; nút xóa màu đỏ.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Mở menu Mã Giảm Giá.",
+        "Đọc màu nền thực tế của Thêm mới, Tạo mã và Xóa từ trình duyệt."
+      ],
+      "actual": "Thêm mới rgb(37, 99, 235); Xóa rgb(239, 68, 68); Tạo mã rgb(249, 115, 22) (cam, sai màu xanh dương của FR-21).",
+      "notes": "",
+      "evidence": "evidence/S-02.png",
+      "reference": "automation/shared-categories.cjs#S-02"
+    },
+    {
+      "id": "S-03",
+      "screen": "Shared",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:48.673+07:00",
+      "expected": "Mỗi trang có đúng một h1 mô tả nội dung trang.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Dashboard.",
+        "Mở menu Danh mục.",
+        "Mở menu Mã Giảm Giá.",
+        "Đếm h1 và đối chiếu nội dung h1/h2 với từng màn hình."
+      ],
+      "actual": "Mỗi màn hình có một h1 chung “EShop Admin”. Nội dung từng màn chỉ có ở h2 (Dashboard, Quản lý Danh mục, Quản lý Mã Giảm Giá).",
+      "notes": "",
+      "evidence": "evidence/S-03.png",
+      "reference": "automation/shared-categories.cjs#S-03"
+    },
+    {
+      "id": "S-04",
+      "screen": "Shared",
+      "category": "ASSISTED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:49.982+07:00",
+      "expected": "Chữ thường đạt tối thiểu 4.5:1, chữ lớn tối thiểu 3:1.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Đo chữ và nền của nút Xóa cỡ nhỏ qua màu trình duyệt, ngưỡng heuristic 4,5:1."
+      ],
+      "actual": "Nút Xóa có chữ rgb(255, 255, 255) trên nền rgb(239, 68, 68), tỷ lệ 3.76:1, dưới 4,5:1.",
+      "notes": "",
+      "evidence": "evidence/S-04.png",
+      "reference": "automation/shared-categories.cjs#S-04"
+    },
+    {
+      "id": "S-05",
+      "screen": "Shared",
+      "category": "MANUAL",
+      "status": "Not Run",
+      "timestamp": "",
+      "expected": "Nội dung và thao tác chính vẫn truy cập được; không có chồng lấn khiến thao tác bị che.",
+      "steps": [],
+      "actual": "",
+      "notes": "Chờ kiểm tra trực tiếp hoặc chưa có phép đo phù hợp.",
+      "evidence": "",
+      "reference": ""
+    },
+    {
+      "id": "S-06",
+      "screen": "Shared",
+      "category": "ASSISTED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:51.068+07:00",
+      "expected": "Nội dung và thao tác chính có thể tiếp cận, không bị chồng lấn hoặc cắt mất khỏi vùng cuộn.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Đặt viewport 375 × 812 và kiểm tra vùng cuộn ngang của khu vực nội dung.",
+        "Mở menu Dashboard.",
+        "Mở menu Danh mục.",
+        "Mở menu Mã Giảm Giá.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Ở 375 px, điều khiển “Tên danh mục mới” ở Danh mục vẫn bị cắt sau khi cuộn tới; chiều rộng hiển thị/nội dung: Dashboard: 119/154, Danh mục: 119/319, Mã Giảm Giá: 119/568.",
+      "notes": "",
+      "evidence": "evidence/S-06.png",
+      "reference": "automation/shared-categories.cjs#S-06"
+    },
+    {
+      "id": "S-07",
+      "screen": "Shared",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:52.408+07:00",
+      "expected": "Mục đang chọn được highlight và mục trước hết highlight.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Dashboard.",
+        "Mở menu Danh mục.",
+        "Mở menu Mã Giảm Giá.",
+        "So màu mục hiện tại với một mục không hoạt động, lần lượt qua ba màn."
+      ],
+      "actual": "Mục hiện tại khác màu mục không hoạt động trên cả ba màn.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#S-07"
+    },
+    {
+      "id": "S-08",
+      "screen": "Shared",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:53.670+07:00",
+      "expected": "Có thể tới và mở cả ba màn bằng bàn phím.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Bắt đầu từ đầu Dashboard, bấm Tab tám lần và kiểm tra phần tử nhận focus trước Enter/Space."
+      ],
+      "actual": "Tab không focus được bất kỳ mục menu đích nào. Focus thực tế: BODY → BODY → BODY → BODY → BODY → BODY → BODY → BODY.",
+      "notes": "",
+      "evidence": "evidence/S-08.png",
+      "reference": "automation/shared-categories.cjs#S-08"
+    },
+    {
+      "id": "S-09",
+      "screen": "Shared",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:54.610+07:00",
+      "expected": "Các điểm focus khả dụng theo thứ tự đọc trên xuống, trái sang phải.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Trong nội dung Danh mục, focus trường Tên rồi bấm Tab hai lần."
+      ],
+      "actual": "Trong nội dung Danh mục, Tab đi theo Tên danh mục → Thêm mới → Xóa dòng đầu. Truy cập menu bằng bàn phím được xét riêng ở S-08.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#S-09"
+    },
+    {
+      "id": "S-10",
+      "screen": "Shared",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:55.719+07:00",
+      "expected": "Mỗi điều khiển đang focus có chỉ báo rõ nhìn thấy được.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Dùng Tab qua các trường và nút Tạo mã, đọc outline/box-shadow của phần tử có :focus-visible."
+      ],
+      "actual": "Sáu trường và nút Tạo mã có :focus-visible cùng outline hoặc box-shadow khi nhận focus.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#S-10"
+    },
+    {
+      "id": "S-11",
+      "screen": "Shared",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-09T21:38:56.981+07:00",
+      "expected": "View phân biệt lỗi kết nối với dữ liệu rỗng và thông báo tình trạng hoặc hướng phục hồi.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mô phỏng mất kết nối của trình duyệt tới API thật rồi tải lại Dashboard."
+      ],
+      "actual": "GET /api/admin/users thất bại; Dashboard vẫn hiển thị “0 ₫” và “0” mà không có thông báo lỗi.",
+      "notes": "",
+      "evidence": "evidence/S-11.png",
+      "reference": "automation/shared-categories.cjs#S-11"
+    },
+    {
+      "id": "S-12",
+      "screen": "Shared",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-09T21:38:58.350+07:00",
+      "expected": "Dữ liệu thật xuất hiện và UI sử dụng được, không còn trạng thái lỗi cũ.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Quan sát request Admin đầu tiên thất bại trước khi khôi phục kết nối.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Dữ liệu Danh mục mẫu xuất hiện lại sau khôi phục kết nối và tải lại.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/shared-categories.cjs#S-12"
+    }
+  ]
+}

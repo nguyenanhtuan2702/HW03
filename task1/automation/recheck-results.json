@@ -1,0 +1,347 @@
+{
+  "baseline": {
+    "path": "automation/results.json",
+    "runId": "HW03-MW9D83SL",
+    "reproducedStatuses": 69,
+    "replicationRunId": "HW03-MWEWSOQC"
+  },
+  "scope": "Kết quả kiểm riêng cập nhật S-05, S-06 và P-20 trong 69 mục gốc. Các mục A-* có quyết định rà soát và kết quả kiểm riêng theo từng ID.",
+  "runs": [
+    {
+      "runId": "HW03-MWEWSOQC",
+      "started": "2026-11-13T18:44:22.171+07:00",
+      "browser": "Chrome 157.0.8103.51",
+      "playwright": "1.62.1",
+      "os": "Windows_NT 10.0.26300",
+      "node": "v24.15.0",
+      "frontend": "http://localhost:5174",
+      "backend": "http://localhost:3000",
+      "viewport": "1440 × 900",
+      "locale": "vi-VN",
+      "mode": "headless",
+      "database": "Fresh fixture database from unchanged copied backend source",
+      "finished": "2026-11-13T18:46:06.876+07:00"
+    },
+    {
+      "runId": "HW03-MWEWZ40M",
+      "started": "2026-11-13T18:49:20.644+07:00",
+      "browser": "Chromium 156.0.8078.4",
+      "playwright": "1.62.1",
+      "os": "Windows_NT 10.0.26300",
+      "node": "v24.15.0",
+      "frontend": "http://localhost:5174",
+      "backend": "http://localhost:3000",
+      "viewport": "Actual window at 1440 × 900 before browser chrome, no viewport emulation",
+      "locale": "vi-VN",
+      "mode": "headless",
+      "database": "Fresh fixture database from unchanged copied backend source",
+      "finished": "2026-11-13T18:49:23.817+07:00"
+    },
+    {
+      "runId": "HW03-MWEX0I8L",
+      "started": "2026-11-13T18:50:29.018+07:00",
+      "browser": "Chrome 157.0.8103.51",
+      "playwright": "1.62.1",
+      "os": "Windows_NT 10.0.26300",
+      "node": "v24.15.0",
+      "frontend": "http://localhost:5174",
+      "backend": "http://localhost:3000",
+      "viewport": "1440 × 900",
+      "locale": "vi-VN",
+      "mode": "headless",
+      "database": "Fresh fixture database from unchanged copied backend source",
+      "finished": "2026-11-13T18:50:34.315+07:00"
+    },
+    {
+      "runId": "HW03-MWEX27EP",
+      "started": "2026-11-13T18:51:45.154+07:00",
+      "browser": "Chrome 157.0.8103.51",
+      "playwright": "1.62.1",
+      "os": "Windows_NT 10.0.26300",
+      "node": "v24.15.0",
+      "frontend": "http://localhost:5174",
+      "backend": "http://localhost:3000",
+      "viewport": "1440 × 900",
+      "locale": "vi-VN",
+      "mode": "headless",
+      "database": "Fresh fixture database from unchanged copied backend source",
+      "finished": "2026-11-13T18:51:49.773+07:00"
+    },
+    {
+      "runId": "HW03-MWEXP8WX",
+      "started": "2026-11-13T19:09:41.018+07:00",
+      "browser": "Chrome 157.0.8103.51",
+      "playwright": "1.62.1",
+      "os": "Windows_NT 10.0.26300",
+      "node": "v24.15.0",
+      "frontend": "http://localhost:5174",
+      "backend": "http://localhost:3000",
+      "viewport": "1440 × 900",
+      "locale": "vi-VN",
+      "mode": "headless",
+      "database": "Fresh fixture database from unchanged copied backend source",
+      "finished": "2026-11-13T19:09:48.154+07:00"
+    },
+    {
+      "runId": "HW03-MWEY76JN",
+      "started": "2026-11-13T19:23:37.117+07:00",
+      "browser": "Chrome 157.0.8103.51",
+      "playwright": "1.62.1",
+      "os": "Windows_NT 10.0.26300",
+      "node": "v24.15.0",
+      "frontend": "http://localhost:5174",
+      "backend": "http://localhost:3000",
+      "viewport": "1440 × 900",
+      "locale": "vi-VN",
+      "mode": "headless",
+      "database": "Fresh fixture database from unchanged copied backend source",
+      "finished": "2026-11-13T19:23:41.229+07:00"
+    }
+  ],
+  "results": [
+    {
+      "id": "P-20",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-13T19:23:39.029+07:00",
+      "expected": "Một hàng mới chứa mã và các trường đúng dữ liệu đã gửi.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Tạo coupon cố định 5.000 ₫, đơn tối thiểu 0 ₫, hết hạn 2099-12-31, giới hạn 1 lần."
+      ],
+      "actual": "Có đúng một hàng và sáu ô khớp: HW03-MWEY76JN-P-20 | Cố định | 5.000 ₫ | 0 ₫ | 2099-12-31 | 1 lần.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/recheck-results.json#P-20",
+      "runId": "HW03-MWEY76JN"
+    },
+    {
+      "id": "S-05",
+      "screen": "Shared",
+      "category": "MANUAL",
+      "status": "Passed",
+      "timestamp": "2026-11-13T18:49:20.645+07:00",
+      "expected": "Nội dung và thao tác chính vẫn truy cập được; không có chồng lấn khiến thao tác bị che.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Zoom do trình duyệt báo: 200%. Viewport CSS ban đầu 1422×804, sau zoom 711×402. DPR 1 → 2.",
+        "Mở menu Dashboard.",
+        "Mở menu Danh mục.",
+        "Mở menu Mã Giảm Giá.",
+        "Đã hoàn nguyên zoom trình duyệt 100%."
+      ],
+      "actual": "Chrome xác nhận zoom 200%. Mở được cả ba màn và cuộn tới vị trí bấm được các điều khiển chính ở Danh mục và Mã giảm giá.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/recheck-results.json#S-05",
+      "runId": "HW03-MWEWZ40M"
+    },
+    {
+      "id": "S-06",
+      "screen": "Shared",
+      "category": "ASSISTED",
+      "status": "Passed",
+      "timestamp": "2026-11-13T18:51:45.157+07:00",
+      "expected": "Sau khi cuộn khi cần, có thể tiếp cận và hoàn thành thao tác chính trên ba màn ở 375 CSS px.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Dashboard.",
+        "Mở menu Danh mục.",
+        "Nhập, thêm, xem và xóa thành công danh mục thử qua GUI ở 375 px.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập, tạo, xem và xóa thành công coupon thử qua GUI ở 375 px."
+      ],
+      "actual": "Mở được ba màn và hoàn thành thêm/xem/xóa trên cả hai bảng ở 375 CSS px sau cuộn. Lượt đo riêng vẫn thấy trường bị cắt và form coupon quá hẹp.",
+      "notes": "Phép đo hình học của lần chạy gốc vẫn ghi nhận ô tên danh mục bị cắt. Tình trạng bố cục được giữ làm quan sát usability.",
+      "evidence": "",
+      "reference": "automation/recheck-results.json#S-06",
+      "runId": "HW03-MWEX27EP"
+    },
+    {
+      "id": "A-01",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-13T19:09:41.034+07:00",
+      "expected": "Không tạo với giá trị tối thiểu trống; hướng dẫn nhập số ≥ 0 hoặc hiển thị rõ mặc định 0 trước khi gửi.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Xóa giá trị mặc định 0 ở ô Đơn tối thiểu; ô vẫn trống ngay trước khi bấm Tạo mã.",
+        "POST gửi min_order_amount=\"\"; HTTP 200."
+      ],
+      "actual": "Ô Đơn tối thiểu để trống lúc gửi; HTTP 200; API đọc lại lưu min_order_amount=\"\" (string). Không có nhắc điền trước khi lưu.",
+      "notes": "",
+      "evidence": "evidence/recheck/A-01.png",
+      "reference": "automation/recheck-results.json#A-01",
+      "runId": "HW03-MWEXP8WX"
+    },
+    {
+      "id": "A-02",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-13T19:09:44.189+07:00",
+      "expected": "Giao diện từ chối trường bắt buộc rỗng hoặc hiện lại số hợp lệ rõ ràng trước khi tạo; không lưu một giá trị khác âm thầm.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Xóa giá trị mặc định 1 ở ô Số lần dùng tối đa/người; ô vẫn trống ngay trước khi bấm Tạo mã.",
+        "POST gửi max_uses_per_user=\"\"; HTTP 200."
+      ],
+      "actual": "Ô Số lần dùng tối đa/người để trống lúc gửi; HTTP 200; API đọc lại lưu max_uses_per_user=1 (number). Không có nhắc điền trước khi lưu.",
+      "notes": "",
+      "evidence": "evidence/recheck/A-02.png",
+      "reference": "automation/recheck-results.json#A-02",
+      "runId": "HW03-MWEXP8WX"
+    },
+    {
+      "id": "A-03",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-13T18:50:29.019+07:00",
+      "expected": "Mã được tạo, bảng hiển thị đơn tối thiểu 0 và lượt 1.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập đơn tối thiểu 0 ₫ và giới hạn 1 lần."
+      ],
+      "actual": "Tạo được coupon và bảng hiển thị đúng đơn tối thiểu 0 ₫, giới hạn 1 lần.",
+      "notes": "Đề xuất gộp dữ liệu biên vào P-20. Lượt riêng đã xác nhận giá trị biên, P-20 gốc giữ bộ dữ liệu đã ghi.",
+      "evidence": "",
+      "reference": "automation/recheck-results.json#A-03",
+      "runId": "HW03-MWEX0I8L"
+    },
+    {
+      "id": "A-05",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-13T18:44:22.196+07:00",
+      "expected": "Không tạo mã chỉ có ký tự khoảng trắng; người dùng thấy yêu cầu sửa mã.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập mã \"   \", loại cố định, giá trị 5000, đơn tối thiểu 10000, hạn 2099-12-31 và hai lượt."
+      ],
+      "actual": "POST HTTP 200 và danh sách trả về mã \"   \" cho ID 5.",
+      "notes": "",
+      "evidence": "evidence/recheck/A-05.png",
+      "reference": "automation/recheck-results.json#A-05",
+      "runId": "HW03-MWEWSOQC"
+    },
+    {
+      "id": "A-06",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-13T19:09:46.344+07:00",
+      "expected": "Có lỗi rõ ràng và hàng vẫn còn, không báo thành công.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập mã \"HW03-MWEXP8WX-A-06\", loại cố định, giá trị 5000, đơn tối thiểu 10000, hạn 2099-12-31 và hai lượt.",
+        "DELETE gặp net::ERR_INTERNET_DISCONNECTED."
+      ],
+      "actual": "Hiện hộp thoại “Lỗi xóa: Network Error”. Hàng vẫn còn trên GUI và API; không quan sát thấy thông báo thành công.",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/recheck-results.json#A-06",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi xóa: Network Error"
+        }
+      ],
+      "runId": "HW03-MWEXP8WX"
+    },
+    {
+      "id": "A-07",
+      "screen": "Coupons",
+      "category": "AUTOMATED",
+      "status": "Passed",
+      "timestamp": "2026-11-13T18:44:25.036+07:00",
+      "expected": "Mã và các thuộc tính vẫn khớp sau tải lại.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Mã Giảm Giá.",
+        "Nhập mã \"HW03-MWEWSOQC-A-07\", loại cố định, giá trị 5000, đơn tối thiểu 10000, hạn 2099-12-31 và hai lượt.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Mã Giảm Giá."
+      ],
+      "actual": "Mã và 5 thuộc tính hiển thị khớp sau reload: HW03-MWEWSOQC-A-07 | Cố định | 5.000 ₫ | 10.000 ₫ | 2099-12-31 | 2 lần",
+      "notes": "",
+      "evidence": "",
+      "reference": "automation/recheck-results.json#A-07",
+      "runId": "HW03-MWEWSOQC"
+    },
+    {
+      "id": "A-08",
+      "screen": "Shared",
+      "category": "ASSISTED",
+      "status": "Blocked",
+      "timestamp": "2026-11-13T19:23:37.119+07:00",
+      "expected": "Người dùng nhận biết sẽ xóa hàng nào qua tên truy cập hoặc ngữ cảnh được đọc cùng nút.",
+      "steps": [
+        "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+        "Mở menu Danh mục.",
+        "Danh mục: [{\"buttonTree\":\"- button \\\"Xóa\\\"\",\"rowTree\":\"- row \\\"#1 Điện thoại Xóa\\\":\\n  - cell \\\"#1\\\"\\n  - cell \\\"Điện thoại\\\"\\n  - cell \\\"Xóa\\\":\\n    - button \\\"Xóa\\\"\"},{\"buttonTree\":\"- button \\\"Xóa\\\"\",\"rowTree\":\"- row \\\"#2 Laptop Xóa\\\":\\n  - cell \\\"#2\\\"\\n  - cell \\\"Laptop\\\"\\n  - cell \\\"Xóa\\\":\\n    - button \\\"Xóa\\\"\"}]",
+        "Mở menu Mã Giảm Giá.",
+        "Mã Giảm Giá: [{\"buttonTree\":\"- button \\\"Xóa\\\"\",\"rowTree\":\"- row \\\"SAVE10 Phần trăm 10% 300.000 ₫ 2099-12-31 1 lần Xóa\\\":\\n  - cell \\\"SAVE10\\\"\\n  - cell \\\"Phần trăm\\\"\\n  - cell \\\"10%\\\"\\n  - cell \\\"300.000 ₫\\\"\\n  - cell \\\"2099-12-31\\\"\\n  - cell \\\"1 lần\\\"\\n  - cell \\\"Xóa\\\":\\n    - button \\\"Xóa\\\"\"},{\"buttonTree\":\"- button \\\"Xóa\\\"\",\"rowTree\":\"- row \\\"BIGBUY Cố định 50.000 ₫ 500.000 ₫ 2099-12-31 1 lần Xóa\\\":\\n  - cell \\\"BIGBUY\\\"\\n  - cell \\\"Cố định\\\"\\n  - cell \\\"50.000 ₫\\\"\\n  - cell \\\"500.000 ₫\\\"\\n  - cell \\\"2099-12-31\\\"\\n  - cell \\\"1 lần\\\"\\n  - cell \\\"Xóa\\\":\\n    - button \\\"Xóa\\\"\"}]"
+      ],
+      "actual": "Cây trợ năng có tên nút Xóa trùng nhau; tên đối tượng có trong các ô của hàng. Chưa đo được lời đọc của trình đọc màn hình khi focus trực tiếp vào nút.",
+      "notes": "Thiếu tiền điều kiện kiểm thử.",
+      "evidence": "",
+      "reference": "automation/recheck-results.json#A-08",
+      "runId": "HW03-MWEY76JN"
+    }
+  ],
+  "supportingObservation": {
+    "id": "S-06",
+    "runId": "HW03-MWEX0I8L",
+    "steps": [
+      "Đăng nhập GUI Admin và chờ chuỗi tải dữ liệu hoàn tất.",
+      "Mở menu Dashboard.",
+      "Mở menu Danh mục.",
+      "Mở menu Mã Giảm Giá.",
+      "Danh mục – Tên danh mục mới: thử vị trí bấm=true, nhìn thấy 119/199 px sau cuộn.",
+      "Danh mục – Thêm mới: thử vị trí bấm=true, nhìn thấy 72/72 px sau cuộn.",
+      "Danh mục – Xóa: thử vị trí bấm=true, nhìn thấy 40/40 px sau cuộn.",
+      "Mã Giảm Giá – Mã coupon (VD: SAVE10): thử vị trí bấm=true, nhìn thấy 18/18 px sau cuộn.",
+      "Mã Giảm Giá – Phần trăm (%)\nSố tiền cố định (₫): thử vị trí bấm=true, nhìn thấy 18/18 px sau cuộn.",
+      "Mã Giảm Giá – Giá trị % (VD: 10): thử vị trí bấm=true, nhìn thấy 18/18 px sau cuộn.",
+      "Mã Giảm Giá – Đơn tối thiểu (₫): thử vị trí bấm=true, nhìn thấy 18/18 px sau cuộn.",
+      "Mã Giảm Giá – Ngày hết hạn: thử vị trí bấm=true, nhìn thấy 18/18 px sau cuộn.",
+      "Mã Giảm Giá – Số lần dùng tối đa/người: thử vị trí bấm=true, nhìn thấy 18/18 px sau cuộn.",
+      "Mã Giảm Giá – Tạo mã: thử vị trí bấm=true, nhìn thấy 58/58 px sau cuộn.",
+      "Mã Giảm Giá – Xóa: thử vị trí bấm=true, nhìn thấy 40/40 px sau cuộn."
+    ],
+    "actual": "Ở 375 CSS px, thử bấm được các trường và nút chính sau cuộn. Một số điều khiển vẫn bị cắt và cần kiểm tra việc nhập bằng tay.",
+    "baselineImage": "evidence/S-06.png",
+    "previousA08RunId": "HW03-MWEWSOQC"
+  },
+  "humanVerification": [
+    {
+      "id": "A-08",
+      "status": "Passed",
+      "tool": "Windows Narrator",
+      "source": "Kết quả kiểm thủ công do sinh viên báo trong chat.",
+      "notes": "Sinh viên báo Passed sau khi nhận hướng dẫn kiểm A-08. Chưa có bản ghi nguyên văn lời đọc. Lượt kiểm cây trợ năng bằng Playwright được giữ trong results."
+    },
+    {
+      "id": "C-22",
+      "screen": "Categories",
+      "ia": "IA-03",
+      "category": "MANUAL",
+      "status": "Passed",
+      "steps": "Tạo Test Focus 1 và Test Focus 2. Dùng Tab tới nút Xóa của Test Focus 1, thực hiện xóa rồi nhấn Tab thêm một lần.",
+      "expected": "Sau khi xóa hàng thử, lần Tab tiếp theo đưa focus tới điều khiển hợp lý trong bảng, ví dụ nút Xóa của hàng kế tiếp.",
+      "actual": "Sau khi xóa Test Focus 1 và nhấn Tab một lần, focus chuyển tới hàng Test Focus 2.",
+      "source": "Sinh viên thực hiện theo ca gợi ý và báo kết quả trong chat.",
+      "notes": "Kết quả phản ánh focus sau lần Tab tiếp theo. Vị trí focus ngay lúc hàng biến mất chưa được ghi nhận."
+    }
+  ]
+}

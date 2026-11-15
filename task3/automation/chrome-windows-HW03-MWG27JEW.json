@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG27JEW",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "chrome-windows",
+    "started": "2026-11-14T14:03:34.665+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Dell 15 DC15250",
+    "playwright": "1.62.1",
+    "node": "v24.22.1",
+    "frontend": "http://localhost:5174",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "headed",
+    "browser": "Google Chrome 157.0.8103.51",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 5174 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "platformEvidence": "evidence/chrome-windows/HW03-MWG27JEW/dashboard-window.png",
+    "finished": "2026-11-14T14:03:48.246+07:00"
+  },
+  "results": [
+    {
+      "id": "C-15",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "chrome-windows",
+      "preconditions": "Sandbox; chuẩn bị cơ chế giữ một request thật pending.",
+      "testData": "Tên duy nhất, bấm lần hai khi POST đầu còn pending.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/165",
+      "category": "AUTOMATED",
+      "status": "Failed",
+      "timestamp": "2026-11-14T14:03:42.580+07:00",
+      "expected": "Một ý định tạo dẫn đến tối đa một bản ghi khi bấm lặp trong lúc đang xử lý.",
+      "steps": [
+        "Đăng nhập GUI Admin bằng Enter và kiểm dữ liệu coupon mẫu hiện trên màn.",
+        "Mở menu Danh mục.",
+        "Giữ POST đầu tới lần bấm thứ hai. Trình duyệt gửi 2 POST trước khi cho request đi tiếp.",
+        "Tải lại Web Admin và chờ GET /api/coupons thành công.",
+        "Mở menu Danh mục."
+      ],
+      "actual": "Hai lần bấm trong lúc chờ tạo 2 hàng cùng tên sau tải lại.",
+      "notes": "",
+      "evidence": "evidence/chrome-windows/HW03-MWG27JEW/C-15.png",
+      "reference": "task3/automation/platform-cases.cjs#C-15"
+    }
+  ]
+}

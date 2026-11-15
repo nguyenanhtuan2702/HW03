@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "runId": "HW03-MWGGKOQX-S05-confirmation",
+    "platform": "safari-apple",
+    "mode": "student-manual",
+    "started": "2026-11-14T21:08:50+07:00",
+    "source": "Xác nhận của sinh viên trong cuộc trò chuyện. Trường started ghi thời điểm lưu xác nhận.",
+    "browser": "Safari 18 (phiên Live)",
+    "os": "macOS 14 (phiên Live)",
+    "device": "Sauce Labs Live desktop VM",
+    "relatedRun": "automation/safari-apple-HW03-MWGGKOQX-live.json"
+  },
+  "results": [
+    {
+      "id": "S-05",
+      "status": "Passed",
+      "steps": ["Sinh viên kiểm thủ công ca zoom 200% trong Safari Live."],
+      "actual": "Sinh viên xác nhận kiểm thủ công cho kết quả đạt. Ảnh hiện có chỉ ghi Dashboard sau khi phóng to và không hiện mức 200%.",
+      "notes": "Passed theo xác nhận của sinh viên. Ảnh Dashboard không hiện mức 200%.",
+      "evidence": "evidence/safari-apple/HW03-MWGGKOQX/S-05-dashboard.png"
+    }
+  ]
+}

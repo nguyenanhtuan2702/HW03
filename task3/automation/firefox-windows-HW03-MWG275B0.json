@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG275B0",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "firefox-windows",
+    "started": "2026-11-14T14:03:16.381+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Dell 15 DC15250",
+    "playwright": "1.62.1",
+    "node": "v24.22.1",
+    "frontend": "http://localhost:5174",
+    "backend": "http://localhost:3000",
+    "viewport": "Kích thước cửa sổ thật",
+    "locale": "vi-VN",
+    "mode": "headed",
+    "browser": "Firefox (Playwright build) 153.0",
+    "identityOverlay": true,
+    "proofOnly": true,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 5174 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "platformEvidence": "evidence/firefox-windows/HW03-MWG275B0/dashboard-window.png",
+    "finished": "2026-11-14T14:03:26.924+07:00",
+    "proofAccepted": true,
+    "proofReview": "Ảnh cửa sổ đã thấy thanh địa chỉ, bản trình duyệt, Windows/device và đủ ba trường danh tính."
+  },
+  "results": []
+}

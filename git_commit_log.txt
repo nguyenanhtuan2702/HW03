@@ -1,0 +1,60 @@
+HW03 - Git commit log và đối chiếu Task 2
+Ngày tổng hợp: 15/11/2026
+Nguồn: Git cục bộ tại D:\eshop-sut. Thời điểm giữ nguyên theo Git.
+Thư mục D:\HW03 là bản hồ sơ tách riêng tại thời điểm tổng hợp.
+
+1. Mốc mã nguồn EShop dùng đối chiếu
+8f3059fbec0512cc8f04972afe6ca20411a98471 | 2026-11-09T14:25:46+07:00 | Test
+
+2. Lịch sử commit HW03 tại HEAD của repo EShop
+HEAD: e1ffb0114258a1dcb53fcc5e6203e96ebcc056da
+Thứ tự từ cũ đến mới, lọc theo đường dẫn HW03.
+
+6d1683f88a4f358f0eb6f59571eabe2eef05d00c | 2026-11-09T21:43:40+07:00 | test(hw03): preserve initial admin GUI checklist draft
+e17e742768a679165e25243f6e107c72a0b73658 | 2026-11-09T21:50:28+07:00 | test(hw03): review GUI criteria and document the test environment
+25cb2f785f42cace025ebddf2d7f9e1856e358d0 | 2026-11-09T21:50:28+07:00 | test(hw03): implement isolated Playwright GUI checks
+e06efdcda15bf2b04927292a73feb29df6863b66 | 2026-11-09T21:50:28+07:00 | test(hw03): record the admin GUI run and failure evidence
+5d9f1ba2233f20e7dc5fc70bb604e7bb822d94bb | 2026-11-09T21:50:28+07:00 | docs(hw03): draft reproducible admin issue reports
+125140bc63923d7c0696cd3a6f3b440d88c720f3 | 2026-11-09T21:50:29+07:00 | docs(hw03): report Task 1 results and prepare human review
+d338fa46ba68044a50e56c5e56b8f0cba7b9a3c9 | 2026-11-09T21:50:29+07:00 | docs(hw03): export the local Git commit log
+2648fc808ffbc6a687440b888b2f3cf4f4b953d7 | 2026-11-13T20:00:02+07:00 | docs(hw03): reconcile Task 1 reviews and retest evidence
+9ba07cac1fddb468292cca0456419d329a30180a | 2026-11-14T14:03:36+07:00 | test(hw03): design cross-browser Task 3 checklist
+298e332c1625b3e82220e24a1b499e6496dc146f | 2026-11-14T14:27:35+07:00 | test(hw03): record Chrome and Firefox Task 3 execution
+72458bc5cdbef74259d09b2bf289d63bba44a39b | 2026-11-14T14:27:36+07:00 | docs(hw03): map reproduced Task 3 failures to existing issues
+5e356855edab9dc97286fefaf375b261ba792e48 | 2026-11-14T14:27:38+07:00 | docs(hw03): report cross-browser results and pending Safari coverage
+32c56d869adb54794ebfa012105503129a350900 | 2026-11-14T14:27:39+07:00 | docs(hw03): export the Task 3 commit log
+2acfbbbc08c323b975d544fb69179d9e2bcd66bb | 2026-11-14T15:17:28+07:00 | test(hw03): add isolated Sauce Safari smoke test
+0dedb34198756e797daa2684b23e241a6266bfa7 | 2026-11-14T15:23:33+07:00 | test(hw03): tighten Safari smoke metadata and artifact capture
+5ec8111de6c024bcaccd6b8dafcb67e1d742142b | 2026-11-14T15:23:34+07:00 | docs(hw03): record actual Safari tunnel smoke outcome
+e23ae667931b1a6e8111d09f34204418ba9adc0b | 2026-11-14T15:23:34+07:00 | docs(hw03): refresh Task 3 local commit log
+6644b9692d21b93c9e27c9411ef12e76ec906e38 | 2026-11-14T15:36:57+07:00 | fix(hw03): verify Sauce proxy before opening Safari
+fbf3310ce7acbf0f480873f701eaaf1a2e63b5b4 | 2026-11-14T15:36:57+07:00 | docs(hw03): record Sauce DNS failure and loopback verification
+478cf6ec8c3b2e3c4a61d2f7e48688f8f9435574 | 2026-11-14T15:36:57+07:00 | docs(hw03): refresh Task 3 local commit log
+50b6fc1421e200a040bb35bc8e4213c9e85f3246 | 2026-11-14T15:42:39+07:00 | test(hw03): record verified Safari smoke and evidence
+4ec223832c1c14ab1593725b56d466e61242caab | 2026-11-14T15:42:39+07:00 | docs(hw03): refresh Task 3 local commit log
+02bb44e26e76d239551ab7d58d776a8a8efc2092 | 2026-11-14T16:00:15+07:00 | test(hw03): execute shared GUI oracles via Safari WebDriver
+e90140c5cce39b8bb62effa35fc931a764781bfe | 2026-11-14T16:07:35+07:00 | test(hw03): support targeted Safari viewport and network rechecks
+ec83e9d0409a7ab0fc5b6e67c734a50c8921705d | 2026-11-14T16:07:36+07:00 | test(hw03): record 69 actual Safari checklist attempts
+f842330774959ea08aeb8deb07afe63fa2d8fde2 | 2026-11-14T16:09:07+07:00 | docs(hw03): compare verified Safari and Windows checklist results
+5bde20fed3828d203c533510a335c9390d75c72c | 2026-11-14T16:09:07+07:00 | docs(hw03): update Task 3 local commit log
+03fa2b951b1abe152b98e546e3f0054134c3a488 | 2026-11-14T20:22:04+07:00 | test(hw03): verify corrected Safari evidence and network rechecks
+52e0af93c61fe38be3d937917fa9f167d804bb18 | 2026-11-14T20:22:04+07:00 | docs(hw03): update Task 3 matrix with verified rechecks
+a48327df32a0d4c2f1c86db9b280ba2d0d670414 | 2026-11-14T20:22:05+07:00 | docs(hw03): refresh local Task 3 commit log
+1336488c456246d9c11a0868a6aa30a9da6d94d2 | 2026-11-14T21:05:40+07:00 | test(hw03): record Safari Live viewport and zoom observations
+8e48a8b14d93c1274e073b03600ba8d1eb10f191 | 2026-11-14T21:05:41+07:00 | docs(hw03): refresh Task 3 local commit log
+3ff2e2f1b45181cd9e03bf6d11b60d67ac0c40fb | 2026-11-14T21:10:47+07:00 | test(hw03): record student-confirmed Safari and Firefox zoom checks
+e1ffb0114258a1dcb53fcc5e6203e96ebcc056da | 2026-11-14T21:10:47+07:00 | docs(hw03): update local Task 3 commit log
+
+3. Checkpoint Task 2 tìm được qua các tham chiếu Git cục bộ
+58baaca4a0ff436e324acdcaecca04fa79bbee77 | 2026-11-09T23:37:51+07:00 | Agent host session a9cb7b0a-613e-40c8-96c7-d924c9aca58a - baseline checkpoint
+Các tệp Task 2 có trong checkpoint:
+- HW03/task2/.gitignore
+- HW03/task2/remote_setup.md
+- HW03/task2/start_remote.mjs
+
+4. Hồ sơ Task 2 ngoài lịch sử commit
+- Pilot P00 và các phiên P01-P07: xem task2/usability_artifacts/sessions/.
+- Phân tích SUS và báo cáo: xem task2/usability_artifacts/04_phan_tich_SUS.md và 05_bao_cao_task2_du_thao.md.
+- Bug P01 (04:23): https://github.com/nguyenanhtuan2702/eshop-sut/issues/172
+- Minh chứng P06 (khoảng 05:00): https://github.com/nguyenanhtuan2702/eshop-sut/issues/44#issuecomment-6889836285
+- Không tìm thấy commit riêng cho từng phiên P00-P07 hoặc báo cáo phân tích Task 2 trong các tham chiếu Git đã đọc. Ghi chú phiên và GitHub Issues là hồ sơ đối chiếu, không được tính là Git commit.

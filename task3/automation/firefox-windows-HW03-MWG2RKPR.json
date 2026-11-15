@@ -1,0 +1,54 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG2RKPR",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "firefox-windows",
+    "started": "2026-11-14T14:19:09.471+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Dell 15 DC15250",
+    "playwright": "1.62.1",
+    "node": "v24.22.1",
+    "frontend": "http://localhost:5174",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 900",
+    "locale": "vi-VN",
+    "mode": "headed",
+    "browser": "Firefox (Playwright build) 153.0",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 5174 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "platformEvidence": "evidence/firefox-windows/HW03-MWG2RKPR/dashboard-window.png",
+    "finished": "2026-11-14T14:19:26.904+07:00"
+  },
+  "results": [
+    {
+      "id": "S-05",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "firefox-windows",
+      "preconditions": "Trình duyệt Chromium desktop ở 100%, khoảng 1440×900 CSS px.",
+      "testData": "Ba màn, điều hướng và thao tác chính.",
+      "issue": "",
+      "category": "MANUAL",
+      "status": "Blocked",
+      "timestamp": "2026-11-14T14:19:16.563+07:00",
+      "expected": "Nội dung và thao tác chính vẫn truy cập được; không có chồng lấn khiến thao tác bị che.",
+      "steps": [
+        "Đăng nhập GUI Admin bằng Enter và kiểm dữ liệu coupon mẫu hiện trên màn."
+      ],
+      "actual": "Phím zoom gốc chưa đạt 200%. DPR 1.25 → 2.4.",
+      "notes": "Thiếu tiền điều kiện kiểm thử.",
+      "evidence": "",
+      "reference": "task3/automation/run.cjs#checkZoom#S-05"
+    }
+  ]
+}

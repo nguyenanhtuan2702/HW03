@@ -1,0 +1,1929 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG6ER88",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "safari-apple",
+    "started": "2026-11-14T16:01:09.849+07:00",
+    "os": "macOS 14.6",
+    "device": "Sauce Labs desktop VM, EU Central",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localtest.me:8080",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 823",
+    "locale": "en-US",
+    "mode": "webdriver",
+    "browser": "Safari 18.3",
+    "identityOverlay": false,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "localFrontend": "http://127.0.0.1:8080",
+    "group": "coupons",
+    "requested": [
+      "P-01",
+      "P-02",
+      "P-03",
+      "P-04",
+      "P-05",
+      "P-06",
+      "P-07",
+      "P-08",
+      "P-09",
+      "P-10",
+      "P-11",
+      "P-12",
+      "P-13",
+      "P-14",
+      "P-15",
+      "P-16",
+      "P-17",
+      "P-18",
+      "P-19",
+      "P-20",
+      "P-21",
+      "P-22",
+      "P-23",
+      "P-24",
+      "P-25",
+      "P-26"
+    ],
+    "infrastructureEvidence": "automation/sauce-smoke-HW03-MWG5L5L2.json",
+    "tunnel": {
+      "region": "eu-central",
+      "name": "hw03-task3",
+      "preflight": "HTML và /api/categories qua proxy Sauce HTTP 200"
+    },
+    "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+    "sessionSetupMs": 33985,
+    "keyboard": "W3C WebDriver sends Tab without modifier; Safari VM keyboard-navigation preference was not changed.",
+    "sessionClosed": true,
+    "finished": "2026-11-14T16:06:41.269+07:00"
+  },
+  "results": [
+    {
+      "id": "P-01",
+      "screen": "Coupons",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Đang ở Mã giảm giá.",
+      "testData": "Heading quản lý coupon.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:01:50.762+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Có tiêu đề rõ đây là quản lý mã giảm giá.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá."
+      ],
+      "actual": "View hiển thị tiêu đề “Quản lý Mã Giảm Giá”.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-01.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-02",
+      "screen": "Coupons",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Có hàng coupon hợp lệ.",
+      "testData": "Cột mã, loại, giá trị, đơn tối thiểu, hết hạn, giới hạn/người, thao tác.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:01:56.636+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Nhãn đầy đủ, dễ phân biệt và đúng thứ tự dữ liệu.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Đọc các tiêu đề cột: Mã | Loại | Giá trị | Đơn tối thiểu | Hết hạn | Giới hạn/người | Hành động."
+      ],
+      "actual": "Bảng có đủ bảy nhãn cột theo thứ tự mã, loại, giá trị, đơn tối thiểu, hạn, lượt và hành động.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-02.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-03",
+      "screen": "Coupons",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Coupon phần trăm và cố định có sẵn.",
+      "testData": "Percent 10; fixed ít nhất 1.000 ₫.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:02:02.130+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Percent có %, tiền cố định có ₫ và phân nhóm hàng nghìn.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Đọc giá trị hai mã seed: SAVE10 “10%”, BIGBUY “50,000 ₫”."
+      ],
+      "actual": "Coupon phần trăm hiển thị 10%, coupon cố định hiển thị 50,000 ₫ có phân nhóm nghìn và ký hiệu ₫.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-03.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-04",
+      "screen": "Coupons",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "ASSISTED",
+      "preconditions": "Coupon form đang thấy; Chromium 100%.",
+      "testData": "Viewport 768×900 và 1280×800.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:02:08.730+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Sáu trường và nút không chồng nhau hoặc bị cắt khỏi vùng có thể tiếp cận.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Đo kích thước sáu trường và nút Tạo mã ở 1280×900 CSS px.",
+        "Đo kích thước sáu trường và nút Tạo mã ở 1024×900 CSS px.",
+        "Đo kích thước sáu trường và nút Tạo mã ở 768×900 CSS px."
+      ],
+      "actual": "Sáu trường và nút Tạo mã đều nằm trong viewport và không chồng nhau ở 1280, 1024 và 768 CSS px.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-04.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-05",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "ASSISTED",
+      "preconditions": "Form coupon hiện hữu.",
+      "testData": "Sáu trường tạo mã.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/158",
+      "timestamp": "2026-11-14T16:02:20.322+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Mỗi trường có nhãn nhận diện được sau khi nhập và tên truy cập phù hợp.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Kiểm tra nhãn liên kết bền vững của sáu điều khiển: 6 điều khiển không có label/aria-label/aria-labelledby."
+      ],
+      "actual": "Các điều khiển không có nhãn bền vững: Mã coupon (VD: SAVE10), SELECT, Giá trị % (VD: 10), Đơn tối thiểu (₫), Ngày hết hạn, Số lần dùng tối đa/người. Placeholder hoặc lựa chọn hiện tại không thay thế nhãn.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-05.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-06",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Form coupon đang thấy.",
+      "testData": "Sáu trường FR-17.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/158",
+      "timestamp": "2026-11-14T16:02:26.015+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Mỗi trường bắt buộc có dấu * cạnh nhãn.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Quan sát nội dung form và dấu * bên cạnh nhãn: \"Tạo mã giảm giá mới\\n\\n\\nTạo mã\"."
+      ],
+      "actual": "Form không gắn dấu * cạnh nhãn cho các trường bắt buộc FR-17: code, type, value, minimum, date, uses.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-06.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-07",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form coupon.",
+      "testData": "Mã rỗng; các trường khác hợp lệ.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:02:35.851+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Không tạo mã rỗng; người dùng được hướng dẫn nhập mã.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "Validation của trình duyệt tại Mã coupon (VD: SAVE10): Fill out this field"
+      ],
+      "actual": "Trình duyệt chặn mã coupon rỗng tại “Mã coupon (VD: SAVE10)”: Fill out this field",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-07.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-08",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Coupon duy nhất do lượt test tạo đã có sẵn.",
+      "testData": "Mã trùng chính xác và trường khác hợp lệ.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/159",
+      "timestamp": "2026-11-14T16:02:47.049+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Mã trùng bị từ chối; phản hồi chỉ rõ mã đã tồn tại.",
+      "status": "Failed",
+      "steps": [
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MWG6ER88-P-08-DUP.",
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-08-DUP\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 500."
+      ],
+      "actual": "Mã HW03-MWG6ER88-P-08-DUP được giữ một bản ghi, nhưng thông báo giao diện là “Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code” thay vì giải thích rõ mã đã tồn tại.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-08.png",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code",
+          "action": "dismiss"
+        }
+      ],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "id": "P-09",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, mã thử chưa tồn tại.",
+      "testData": "Mã duy nhất nhập bằng chữ thường.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:03:02.102+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Mã xuất hiện sau lưu trùng với dạng đã thấy ngay trước gửi; không biến đổi ngầm giữa hai màn.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"hw03-mwg6er88-p-09-case\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Nhập “hw03-mwg6er88-p-09-case”; form hiển thị “HW03-MWG6ER88-P-09-CASE” trước khi gửi và bảng lưu cùng chuỗi.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-09.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-10",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Form coupon ở trạng thái ban đầu.",
+      "testData": "Lựa chọn percent và fixed.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:03:16.144+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Hai loại phân biệt được và trường giá trị hiển thị đơn vị/hint tương ứng.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Đổi loại: Phần trăm (%) → Giá trị % (VD: 10); Số tiền cố định (₫) → Số tiền (VD: 50000)."
+      ],
+      "actual": "Dropdown phân biệt phần trăm và số tiền cố định, gợi ý của trường giá trị đổi tương ứng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-10.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-11",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form coupon.",
+      "testData": "Mã duy nhất; giá trị 0; trường còn lại hợp lệ.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/8",
+      "timestamp": "2026-11-14T16:03:26.312+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Không tạo coupon giá trị 0; có hướng dẫn phù hợp.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-11-GUI\",\"type\":\"percent\",\"value\":\"0\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Form chấp nhận giá trị giảm 0 và POST trả HTTP 200, mã HW03-MWG6ER88-P-11-GUI xuất hiện trong bảng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-11.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-12",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form coupon.",
+      "testData": "Mã duy nhất; giá trị -10; trường khác hợp lệ.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/8",
+      "timestamp": "2026-11-14T16:03:39.693+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Không tạo coupon giá trị âm; có hướng dẫn phù hợp.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-12-GUI\",\"type\":\"percent\",\"value\":\"-10\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Form chấp nhận giá trị giảm -10 và POST trả HTTP 200, mã HW03-MWG6ER88-P-12-GUI xuất hiện trong bảng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-12.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-13",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form coupon.",
+      "testData": "Mã duy nhất; đơn tối thiểu -1; trường khác hợp lệ.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/9",
+      "timestamp": "2026-11-14T16:03:53.241+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Không tạo coupon với đơn tối thiểu dưới 0.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-13-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"-1\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200."
+      ],
+      "actual": "Form chấp nhận đơn tối thiểu -1 ₫ và POST trả HTTP 200, mã HW03-MWG6ER88-P-13-GUI xuất hiện trong bảng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-13.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-14",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form coupon.",
+      "testData": "Mã duy nhất; số lần/người 0; trường khác hợp lệ.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:04:06.932+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Không tạo coupon với số lượt dưới 1; giá trị 0 bị báo không hợp lệ.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-14-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"0\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "Validation của trình duyệt tại Số lần dùng tối đa/người: Value must be greater than or equal to 1"
+      ],
+      "actual": "Trình duyệt chặn giới hạn 0 lượt tại “Số lần dùng tối đa/người”: Value must be greater than or equal to 1",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-14.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-15",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form coupon.",
+      "testData": "Mã duy nhất; ngày rỗng; trường khác hợp lệ.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:04:18.593+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Không tạo coupon thiếu ngày; thông báo yêu cầu ngày.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-15-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "Validation của trình duyệt tại Ngày hết hạn: Fill out this field"
+      ],
+      "actual": "Trình duyệt chặn ngày hết hạn để trống tại “Ngày hết hạn”: Fill out this field",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-15.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-16",
+      "screen": "Coupons",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Form coupon; trình duyệt/locale được ghi.",
+      "testData": "Ngày tương lai cố định.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:04:30.020+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Trường nhận focus, ngày có thể nhập/chọn bằng phím và focus có thể rời trường.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Tab vào trường ngày và bấm ArrowDown: 2099-12-31 → .",
+        "Phím Tab do WebDriver gửi ở cấu hình bàn phím của phiên Sauce."
+      ],
+      "actual": "Tab đã vào trường ngày nhưng ArrowDown không chỉnh được giá trị ngày.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-16.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-17",
+      "screen": "Coupons",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Đang ở Dashboard.",
+      "testData": "Mục Mã giảm giá.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:04:38.871+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Form tạo và bảng mã giảm giá xuất hiện.",
+      "status": "Passed",
+      "steps": [
+        "Mở Dashboard.",
+        "Mở Mã Giảm Giá."
+      ],
+      "actual": "Bấm menu Mã Giảm Giá từ Dashboard mở đúng tiêu đề, form tạo mã và bảng coupon.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-17.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-18",
+      "screen": "Coupons",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Đang ở form coupon.",
+      "testData": "Mã, loại, giá trị, đơn tối thiểu, ngày, lượt, submit.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:04:46.456+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Focus đi qua sáu trường theo trật tự nhìn rồi tới Tạo mã.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Trình tự Tab: code → type → value → minimum → date → uses → code → type → value → minimum → date. Gộp các segment lặp liền nhau của ô date.",
+        "Phím Tab do WebDriver gửi ở cấu hình bàn phím của phiên Sauce."
+      ],
+      "actual": "Trình tự focus thực tế code → type → value → minimum → date → uses → code → type → value → minimum → date; mong đợi code → type → value → minimum → date → uses → submit.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-18.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-19",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "ASSISTED",
+      "preconditions": "Sandbox, form coupon.",
+      "testData": "Mã hợp lệ duy nhất.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:05:00.246+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Thành công dễ nhận ra qua phản hồi rõ hoặc thay đổi nhìn thấy được; reset im lặng chưa đủ.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-19-GUI\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200.",
+        "Quan sát phản hồi ngay sau tạo: có thông báo=false, mã mới nằm trong vùng nhìn=true."
+      ],
+      "actual": "Mã HW03-MWG6ER88-P-19-GUI xuất hiện ngay trong vùng nhìn sau khi tạo, không cần cuộn. Form không hiện thông báo thành công riêng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-19.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-20",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, chưa có mã thử.",
+      "testData": "Mã duy nhất, loại cố định, giảm 5.000 ₫, đơn tối thiểu 0 ₫, ngày hợp lệ và giới hạn 1 lượt.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:05:13.818+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Một hàng mới chứa mã và các trường đúng dữ liệu đã gửi.",
+      "status": "Passed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-20-GUI\",\"type\":\"fixed\",\"value\":\"5000\",\"minimum\":\"0\",\"date\":\"2099-12-31\",\"uses\":\"1\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 200.",
+        "Hàng mới: HW03-MWG6ER88-P-20-GUI | Cố định | 5,000 ₫ | 0 ₫ | 2099-12-31 | 1 lần | Xóa."
+      ],
+      "actual": "Coupon HW03-MWG6ER88-P-20-GUI xuất hiện đúng một lần với loại cố định, giá trị 5.000 ₫, tối thiểu 0 ₫, hạn 2099-12-31, giới hạn 1 lượt.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-20.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-21",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Coupon thử cùng mã đã tồn tại.",
+      "testData": "Mã trùng và tất cả trường còn lại hợp lệ.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/159",
+      "timestamp": "2026-11-14T16:05:26.996+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Thông báo lỗi hiển thị trong giao diện phía trên nút Tạo mã.",
+      "status": "Failed",
+      "steps": [
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MWG6ER88-P-21-ERR.",
+        "Mở Mã Giảm Giá.",
+        "Nhập coupon qua GUI: {\"code\":\"HW03-MWG6ER88-P-21-ERR\",\"type\":\"percent\",\"value\":\"12\",\"minimum\":\"20000\",\"date\":\"2099-12-31\",\"uses\":\"2\"}.",
+        "Bấm Tạo mã và quan sát phản hồi giao diện.",
+        "POST coupon trả HTTP 500."
+      ],
+      "actual": "Tạo mã trùng trả HTTP 500. Sau khi đóng hộp thoại “Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code”, form không hiển thị thông báo lỗi phía trên nút Tạo mã.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-21.png",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi: SQLITE_CONSTRAINT: UNIQUE constraint failed: coupons.code",
+          "action": "dismiss"
+        }
+      ],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/admin/coupons",
+          "status": 500
+        }
+      ]
+    },
+    {
+      "id": "P-22",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Mã do lượt test tạo và nhìn thấy được.",
+      "testData": "Mã/ID thử.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/164",
+      "timestamp": "2026-11-14T16:05:45.696+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Có bước xác nhận rõ đối tượng hoặc cơ hội an toàn trước khi xóa.",
+      "status": "Failed",
+      "steps": [
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MWG6ER88-P-22-CONFIRM.",
+        "Mở Mã Giảm Giá.",
+        "Bấm Xóa tại hàng HW03-MWG6ER88-P-22-CONFIRM và hủy xác nhận nếu có.",
+        "DELETE trả HTTP 200 và hàng HW03-MWG6ER88-P-22-CONFIRM biến mất khỏi bảng."
+      ],
+      "actual": "Bấm Xóa một lần đã xóa HW03-MWG6ER88-P-22-CONFIRM và cập nhật bảng, không có hộp thoại xác nhận.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-22.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/admin/coupons/13",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-23",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Có mã thử và bước xác nhận/hủy của P-22.",
+      "testData": "Mã/ID thử.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:05:57.548+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Mã còn và không gửi DELETE.",
+      "status": "Blocked",
+      "steps": [
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MWG6ER88-P-23-CANCEL.",
+        "Mở Mã Giảm Giá.",
+        "Bấm Xóa tại hàng HW03-MWG6ER88-P-23-CANCEL và hủy xác nhận nếu có.",
+        "DELETE trả HTTP 200 và hàng HW03-MWG6ER88-P-23-CANCEL biến mất khỏi bảng."
+      ],
+      "actual": "Không có hộp thoại xác nhận để thực hiện thao tác Hủy (xem P-22).",
+      "notes": "Thiếu tiền điều kiện đã quan sát.",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-23.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/admin/coupons/14",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-24",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Mã thử tồn tại, biết danh sách mã trước xóa.",
+      "testData": "Mã/ID thử và một mã đối chứng.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:06:08.789+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Chỉ mã mục tiêu biến mất.",
+      "status": "Passed",
+      "steps": [
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MWG6ER88-P-24-DELETE.",
+        "Mở Mã Giảm Giá.",
+        "Bấm Xóa tại hàng HW03-MWG6ER88-P-24-DELETE và chấp nhận xác nhận nếu có.",
+        "DELETE trả HTTP 200 và hàng HW03-MWG6ER88-P-24-DELETE biến mất khỏi bảng.",
+        "Trước xóa có 5 hàng, sau xóa có 4 hàng."
+      ],
+      "actual": "Đúng hàng HW03-MWG6ER88-P-24-DELETE biến mất; 4 mã khác giữ nguyên.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-24.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/admin/coupons/15",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-25",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Có coupon hết hạn và còn hạn; ghi ngày trình duyệt.",
+      "testData": "Ví dụ EXPIRED và SAVE10 trong sandbox seed.",
+      "issue": "",
+      "timestamp": "2026-11-14T16:06:20.510+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Trạng thái hết hạn hoặc ngày hiển thị giúp phân biệt đúng mã hết hạn với mã còn hạn.",
+      "status": "Passed",
+      "steps": [
+        "Tạo coupon dùng một lần cho kiểm thử: HW03-MWG6ER88-P-25-EXPIRED.",
+        "Mở Mã Giảm Giá.",
+        "Coupon thử hạn 2020-01-01 hiện “Hết hạn”; SAVE10 hiện “2099-12-31”."
+      ],
+      "actual": "Mã hết hạn ngày 2020-01-01 hiển thị “Hết hạn”; mã còn hạn hiển thị ngày 2099-12-31.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-25.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "P-26",
+      "screen": "Coupons",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "coupons",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox/fixture có 0 coupon.",
+      "testData": "GET coupons trả [].",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/167",
+      "timestamp": "2026-11-14T16:06:29.999+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "4c0a2ccc22474141b16e786d3235ff89",
+      "expected": "Có thông báo danh sách rỗng dễ phân biệt với lỗi tải.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Danh sách coupon rỗng trên sandbox: 0 hàng; trạng thái rỗng hiển thị: false."
+      ],
+      "actual": "Sau khi dữ liệu tải xong, bảng coupon có 0 hàng nhưng không có thông báo danh sách rỗng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG6ER88/P-26.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    }
+  ]
+}

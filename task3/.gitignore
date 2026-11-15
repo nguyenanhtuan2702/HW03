@@ -1,0 +1,4 @@
+# Submission evidence contains the student's identity. Keep it local to this workspace.
+evidence/
+automation/webdriver-local-*.json
+automation/*.json.tmp

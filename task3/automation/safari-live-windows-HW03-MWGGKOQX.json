@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "runId": "HW03-MWGGKOQX",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "safari-live-windows",
+    "started": "2026-11-14T20:45:42.729+07:00",
+    "os": "Windows_NT 10.0.26300",
+    "device": "Máy Windows cục bộ",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "https://localtest.me:8443",
+    "backend": "http://localhost:3000",
+    "viewport": null,
+    "locale": null,
+    "mode": "manual-server",
+    "browser": "",
+    "identityOverlay": true,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "HTTPS 8443 trả đúng trang và API danh mục qua Sauce Connect.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "localFrontend": "http://127.0.0.1:8080",
+    "finished": "2026-11-14T21:13:51.112+07:00"
+  },
+  "results": []
+}

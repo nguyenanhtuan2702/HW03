@@ -1,0 +1,3229 @@
+{
+  "metadata": {
+    "runId": "HW03-MWG642BV",
+    "sutCommit": "8f3059fbec0512cc8f04972afe6ca20411a98471",
+    "platform": "safari-apple",
+    "started": "2026-11-14T15:52:51.020+07:00",
+    "os": "macOS 14.6",
+    "device": "Sauce Labs desktop VM, EU Central",
+    "playwright": "1.62.1",
+    "node": "v24.15.0",
+    "frontend": "http://localtest.me:8080",
+    "backend": "http://localhost:3000",
+    "viewport": "1440 × 823",
+    "locale": "en-US",
+    "mode": "webdriver",
+    "browser": "Safari 18.3",
+    "identityOverlay": false,
+    "proofOnly": false,
+    "database": "SQLite tạm từ seed của commit SUT, phục hồi fixture giữa từng ca",
+    "setup": [
+      "Backend tạm chỉ nghe loopback.",
+      "API tạm dùng Cache-Control: no-store và tắt ETag để đọc đúng fixture."
+    ],
+    "lifecycle": [
+      "Trích mã đúng commit SUT vào thư mục tạm. Dữ liệu workspace nằm ngoài thư mục chạy.",
+      "Backend 3000 và Web Admin 8080 xác nhận HTTP 200 trên loopback.",
+      "Đã dừng tiến trình do runner tạo và thu dọn thư mục tạm."
+    ],
+    "localFrontend": "http://127.0.0.1:8080",
+    "group": "shared, dashboard, categories, coupons",
+    "requested": [
+      "S-01",
+      "S-02",
+      "S-03",
+      "S-04",
+      "S-06",
+      "S-07",
+      "S-08",
+      "S-09",
+      "S-10",
+      "S-11",
+      "S-12",
+      "D-01",
+      "D-02",
+      "D-03",
+      "D-04",
+      "D-05",
+      "D-06",
+      "D-07",
+      "D-08",
+      "D-09",
+      "D-10",
+      "C-01",
+      "C-02",
+      "C-03",
+      "C-04",
+      "C-05",
+      "C-06",
+      "C-07",
+      "C-08",
+      "C-09",
+      "C-10",
+      "C-11",
+      "C-12",
+      "C-13",
+      "C-14",
+      "C-15",
+      "C-16",
+      "C-17",
+      "C-18",
+      "C-19",
+      "C-20",
+      "C-21",
+      "C-22",
+      "P-01",
+      "P-02",
+      "P-03",
+      "P-04",
+      "P-05",
+      "P-06",
+      "P-07",
+      "P-08",
+      "P-09",
+      "P-10",
+      "P-11",
+      "P-12",
+      "P-13",
+      "P-14",
+      "P-15",
+      "P-16",
+      "P-17",
+      "P-18",
+      "P-19",
+      "P-20",
+      "P-21",
+      "P-22",
+      "P-23",
+      "P-24",
+      "P-25",
+      "P-26"
+    ],
+    "infrastructureEvidence": "automation/sauce-smoke-HW03-MWG5L5L2.json",
+    "tunnel": {
+      "region": "eu-central",
+      "name": "hw03-task3",
+      "preflight": "HTML và /api/categories qua proxy Sauce HTTP 200"
+    },
+    "jobId": "d857a88ec8e34180979511249d9ad963",
+    "sessionSetupMs": 33804,
+    "interrupted": "Dừng trước giới hạn phiên. Chạy lại nhóm để tiếp tục.",
+    "sessionClosed": true,
+    "finished": "2026-11-14T16:00:24.414+07:00"
+  },
+  "results": [
+    {
+      "id": "S-01",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "ASSISTED",
+      "preconditions": "Phiên Admin; ba mục tiêu đã tải.",
+      "testData": "Nhãn sidebar, tiêu đề, nút và thông báo thường dùng; bỏ qua hậu tố doanh thu của D-05.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:53:31.550+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Giao diện dùng tiếng Việt nhất quán, ngoại trừ thuật ngữ kỹ thuật chuẩn.",
+      "status": "Passed",
+      "steps": [
+        "Mở Dashboard.",
+        "Mở Danh mục.",
+        "Mở Mã Giảm Giá.",
+        "Đọc ba tiêu đề và các nút thao tác trong phạm vi. Tách riêng nhãn Delivered (D-05)."
+      ],
+      "actual": "Tiêu đề: Dashboard; Quản lý Danh mục; Quản lý Mã Giảm Giá. Nhãn thao tác tiếng Việt; Dashboard được giữ như thuật ngữ quản trị, cần người review xác nhận ngoại lệ.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-01.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-02",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "AUTOMATED",
+      "preconditions": "Danh mục và Mã giảm giá đã tải, mỗi bảng có ít nhất một hàng.",
+      "testData": "Nút Thêm mới, Tạo mã và Xóa của hai bảng.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/160",
+      "timestamp": "2026-11-14T15:53:41.654+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Nút hành động tích cực màu xanh dương; nút xóa màu đỏ.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Mở Mã Giảm Giá.",
+        "Đọc màu nền thực tế của Thêm mới, Tạo mã và Xóa từ trình duyệt."
+      ],
+      "actual": "Thêm mới rgb(37, 99, 235); Xóa rgb(239, 68, 68); Tạo mã rgb(249, 115, 22) (cam, sai màu xanh dương của FR-21).",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-02.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-03",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "AUTOMATED",
+      "preconditions": "Đã đăng nhập; ba view khả dụng.",
+      "testData": "Dashboard, Danh mục, Mã giảm giá.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/161",
+      "timestamp": "2026-11-14T15:53:49.803+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Mỗi trang có đúng một h1 mô tả nội dung trang.",
+      "status": "Failed",
+      "steps": [
+        "Mở Dashboard.",
+        "Mở Danh mục.",
+        "Mở Mã Giảm Giá.",
+        "Đếm h1 và đối chiếu nội dung h1/h2 với từng màn hình."
+      ],
+      "actual": "Mỗi màn hình có một h1 chung “EShop Admin”. Nội dung từng màn chỉ có ở h2 (Dashboard, Quản lý Danh mục, Quản lý Mã Giảm Giá).",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-03.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-04",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "ASSISTED",
+      "preconditions": "Ba màn ở trạng thái mặc định; có công cụ lấy màu chữ và nền.",
+      "testData": "Nhãn active, heading thẻ doanh thu, nút Tạo mã, placeholder danh mục.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/169",
+      "timestamp": "2026-11-14T15:53:59.939+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Chữ thường đạt tối thiểu 4.5:1, chữ lớn tối thiểu 3:1.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Đo chữ và nền của nút Xóa cỡ nhỏ qua màu trình duyệt, ngưỡng heuristic 4,5:1."
+      ],
+      "actual": "Nút Xóa có chữ rgb(255, 255, 255) trên nền rgb(239, 68, 68), tỷ lệ 3.76:1, dưới 4,5:1.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-04.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-06",
+      "screen": "Shared",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "ASSISTED",
+      "preconditions": "Chromium ở 100%, viewport 375×812 CSS px.",
+      "testData": "Dashboard, Danh mục, Mã giảm giá; một hàng thử mỗi bảng.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:54:05.822+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Sau khi cuộn khi cần, có thể tiếp cận và hoàn thành thao tác chính trên ba màn ở 375 CSS px.",
+      "status": "Blocked",
+      "steps": [
+        "Đo viewport CSS thực bằng WebDriver trước khi chấm.",
+        "Mở Dashboard.",
+        "Mở Danh mục.",
+        "Thêm, xem và xóa danh mục thử tại 375 CSS px.",
+        "Mở Mã Giảm Giá."
+      ],
+      "actual": "WebDriverError",
+      "notes": "Gián đoạn WebDriver hoặc bộ kiểm.",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-06.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/categories/4",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-07",
+      "screen": "Shared",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "AUTOMATED",
+      "preconditions": "Đã đăng nhập; menu ba mục khả dụng.",
+      "testData": "Dashboard, Danh mục, Mã giảm giá.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:54:27.714+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Mục đang chọn được highlight và mục trước hết highlight.",
+      "status": "Passed",
+      "steps": [
+        "Mở Dashboard.",
+        "Mở Danh mục.",
+        "Mở Mã Giảm Giá.",
+        "So màu mục hiện tại với một mục không hoạt động, lần lượt qua ba màn."
+      ],
+      "actual": "Mục hiện tại khác màu mục không hoạt động trên cả ba màn.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-07.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-08",
+      "screen": "Shared",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "AUTOMATED",
+      "preconditions": "Đã đăng nhập; bắt đầu không focus vào menu.",
+      "testData": "Dashboard, Danh mục, Mã giảm giá.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/163",
+      "timestamp": "2026-11-14T15:54:42.259+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Có thể tới và mở cả ba màn bằng bàn phím.",
+      "status": "Failed",
+      "steps": [
+        "Bắt đầu từ đầu Dashboard, bấm Tab tám lần và kiểm tra phần tử nhận focus trước Enter/Space."
+      ],
+      "actual": "Tab không focus được bất kỳ mục menu đích nào. Focus thực tế: BODY → BODY → BODY → BODY → BODY → BODY → BODY → BODY.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-08.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-09",
+      "screen": "Shared",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "ASSISTED",
+      "preconditions": "Dashboard/Danh mục/Mã giảm giá đã tải.",
+      "testData": "Điểm dừng khả dụng trong sidebar và nội dung.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:54:52.670+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Các điểm focus khả dụng theo thứ tự đọc trên xuống, trái sang phải.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Trong nội dung Danh mục, focus trường Tên rồi bấm Tab hai lần."
+      ],
+      "actual": "Tab không đi theo thứ tự Tên danh mục → Thêm mới → nút Xóa đầu bảng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-09.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-10",
+      "screen": "Shared",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "ASSISTED",
+      "preconditions": "Form Danh mục/Mã giảm giá và nút xóa hiện hữu.",
+      "testData": "Ô nhập, select, nút tạo/xóa.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:55:01.033+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Mỗi điều khiển đang focus có chỉ báo rõ nhìn thấy được.",
+      "status": "Failed",
+      "steps": [
+        "Mở Mã Giảm Giá.",
+        "Dùng Tab qua các trường và nút Tạo mã, đọc outline/box-shadow của phần tử có :focus-visible."
+      ],
+      "actual": "Có trường hoặc nút không có chỉ báo focus khi điều hướng bằng Tab: [{\"visible\":true,\"tag\":\"INPUT\"},{\"visible\":true,\"tag\":\"SELECT\"},{\"visible\":true,\"tag\":\"INPUT\"},{\"visible\":true,\"tag\":\"INPUT\"},{\"visible\":false,\"tag\":\"INPUT\"},{\"visible\":false,\"tag\":\"INPUT\"},{\"visible\":false,\"tag\":\"INPUT\"}]",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-10.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "S-11",
+      "screen": "Shared",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "AUTOMATED",
+      "preconditions": "Phiên đã đăng nhập và giữ token; thử trên sandbox hoặc trình duyệt riêng.",
+      "testData": "Dữ liệu có sẵn trước khi gián đoạn.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/166",
+      "timestamp": "2026-11-14T15:55:11.373+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "View phân biệt lỗi kết nối với dữ liệu rỗng và thông báo tình trạng hoặc hướng phục hồi.",
+      "status": "Failed",
+      "steps": [
+        "Mô phỏng mất kết nối của trình duyệt tới API thật rồi tải lại Dashboard."
+      ],
+      "actual": "GET /api/admin/users thất bại; Dashboard vẫn hiển thị “0 ₫” và “0” mà không có thông báo lỗi.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-11.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        }
+      ]
+    },
+    {
+      "id": "S-12",
+      "screen": "Shared",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "shared",
+      "category": "AUTOMATED",
+      "preconditions": "Phiên vẫn có token; đã xác minh request bị gián đoạn.",
+      "testData": "Danh mục/coupon có sẵn nhận diện được.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:55:17.174+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Dữ liệu thật xuất hiện và UI sử dụng được, không còn trạng thái lỗi cũ.",
+      "status": "Passed",
+      "steps": [
+        "Quan sát request Admin đầu tiên thất bại trước khi khôi phục kết nối.",
+        "Mở Danh mục."
+      ],
+      "actual": "Dữ liệu Danh mục mẫu xuất hiện lại sau khôi phục kết nối và tải lại.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/S-12.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-01",
+      "screen": "Dashboard",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "AUTOMATED",
+      "preconditions": "Dashboard đã tải.",
+      "testData": "Hai thẻ thống kê.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:55:27.655+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Có nhãn nhận diện tổng doanh thu và tổng số đơn hàng.",
+      "status": "Passed",
+      "steps": [
+        "Đọc hai nhãn thẻ thống kê trên Dashboard."
+      ],
+      "actual": "Hai nhãn đang hiển thị: Tổng doanh thu (Delivered) và Tổng số đơn hàng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-01.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-02",
+      "screen": "Dashboard",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "AUTOMATED",
+      "preconditions": "Có đơn delivered dương trong dữ liệu thử riêng; request đơn hàng đã hoàn tất.",
+      "testData": "Số tiền tạo doanh thu >= 1.000 ₫.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:55:32.904+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Giá trị dùng ký hiệu ₫ và dấu phân tách hàng nghìn theo locale trình duyệt.",
+      "status": "Passed",
+      "steps": [
+        "Dữ liệu thử qua API: đơn #1, 1234567 ₫, delivered.",
+        "Đọc nguyên văn giá trị doanh thu: “2,469,134 ₫”."
+      ],
+      "actual": "Doanh thu 2,469,134 ₫ có dấu phân nhóm hàng nghìn và ký hiệu ₫. Giá trị số được đối chiếu riêng tại D-07.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-02.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-03",
+      "screen": "Dashboard",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "AUTOMATED",
+      "preconditions": "Dashboard đã tải.",
+      "testData": "Giá trị thẻ tổng số đơn.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:55:41.579+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Giá trị hiển thị dạng số nguyên không kèm đơn vị tiền.",
+      "status": "Passed",
+      "steps": [
+        "Đọc nguyên văn Tổng số đơn hàng: “0”."
+      ],
+      "actual": "Tổng số đơn hàng hiển thị số nguyên 0, không có ký hiệu tiền.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-03.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-04",
+      "screen": "Dashboard",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "ASSISTED",
+      "preconditions": "Dashboard đã tải; trình duyệt 100%.",
+      "testData": "1280×800 và 1024×768 CSS px.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:55:46.885+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Hai thẻ không đè nhau; nhãn và giá trị đầy đủ.",
+      "status": "Passed",
+      "steps": [
+        "Đo viewport CSS thực bằng WebDriver trước khi chấm.",
+        "Đo khung nội dung và vị trí hai thẻ ở viewport 1280×800 CSS px.",
+        "Đo khung nội dung và vị trí hai thẻ ở viewport 1024×768 CSS px."
+      ],
+      "actual": "Hai thẻ không chồng hoặc tràn ở viewport 1280×800 và 1024×768 CSS px tại zoom mặc định.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-04.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-05",
+      "screen": "Dashboard",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "ASSISTED",
+      "preconditions": "Dashboard đã tải.",
+      "testData": "Hậu tố trong nhãn tổng doanh thu.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/162",
+      "timestamp": "2026-11-14T15:55:56.406+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Hậu tố nếu có diễn đạt trạng thái giao thành công dễ hiểu, ưu tiên nhãn “Đã giao”.",
+      "status": "Failed",
+      "steps": [
+        "Đọc nhãn doanh thu “Tổng doanh thu (Delivered)”."
+      ],
+      "actual": "Nhãn “Tổng doanh thu (Delivered)” dùng “Delivered” cho trạng thái đã giao, trong khi các nhãn trạng thái dành cho người dùng tiếng Việt.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-05.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-06",
+      "screen": "Dashboard",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "AUTOMATED",
+      "preconditions": "Đang ở Danh mục.",
+      "testData": "Heading Dashboard.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:56:01.590+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Nội dung Dashboard và hai thẻ thống kê xuất hiện.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Mở Dashboard."
+      ],
+      "actual": "Từ Danh mục, bấm Dashboard và thấy đúng tiêu đề cùng hai thẻ thống kê.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-06.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-07",
+      "screen": "Dashboard",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox riêng có ít nhất một delivered dương và một đơn trạng thái khác dương.",
+      "testData": "Hai hoặc nhiều đơn có tổng tiền và trạng thái biết trước.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/23",
+      "timestamp": "2026-11-14T15:56:10.294+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Doanh thu bằng tổng total_amount của các đơn delivered.",
+      "status": "Failed",
+      "steps": [
+        "Dữ liệu thử qua API: đơn #2, 246810 ₫, delivered.",
+        "Dữ liệu thử qua API: đơn #3, 135790 ₫, pending.",
+        "Đối chiếu tổng các đơn delivered = 246810 ₫ với giá trị Dashboard “493,620 ₫”."
+      ],
+      "actual": "Dashboard hiển thị 493,620 ₫; tổng đối chiếu của riêng đơn đã giao là 246810 ₫.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-07.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-08",
+      "screen": "Dashboard",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox có tập đơn biết trước; request orders hoàn tất.",
+      "testData": "Các đơn nhiều trạng thái.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:56:18.103+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Tổng số bằng số đơn tồn tại của mọi trạng thái.",
+      "status": "Passed",
+      "steps": [
+        "Dữ liệu thử qua API: đơn #4, 195000 ₫, pending.",
+        "Đối chiếu Tổng số đơn hàng “1” với 1 đơn mà API liệt kê."
+      ],
+      "actual": "Dashboard hiển thị 1, khớp 1 đơn của tập dữ liệu.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-08.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-09",
+      "screen": "Dashboard",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox với 0 đơn, request orders hoàn tất.",
+      "testData": "Danh sách đơn rỗng.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:56:25.944+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Doanh thu và số đơn bằng 0, không hiển thị NaN hoặc undefined.",
+      "status": "Passed",
+      "steps": [
+        "API xác nhận 0 đơn; đọc hai thẻ Dashboard: [\"0 ₫\",\"0\"]."
+      ],
+      "actual": "Dữ liệu đã tải, 0 đơn hàng và 0 ₫ hiển thị đúng khi API trả danh sách rỗng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-09.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "D-10",
+      "screen": "Dashboard",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "dashboard",
+      "category": "ASSISTED",
+      "preconditions": "Sandbox có đơn; phiên đã đăng nhập; dùng throttle hoặc giữ request thật ở trạng thái pending.",
+      "testData": "Dữ liệu Dashboard khác 0.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/166",
+      "timestamp": "2026-11-14T15:56:31.544+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Có dấu hiệu đang tải hoặc trạng thái tạm đủ rõ để tránh hiểu nhầm là số 0 đã tải.",
+      "status": "Failed",
+      "steps": [
+        "Giữ yêu cầu GET đơn hàng thực tại biên trình duyệt, quan sát Dashboard khi phản hồi còn chờ. Không thay thế nội dung phản hồi."
+      ],
+      "actual": "Khi GET đơn hàng chưa được chuyển đi, giao diện đã hiển thị 0 ₫ và 0 và không có trạng thái đang tải nhận biết được.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/D-10.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-01",
+      "screen": "Categories",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Đang ở tab Danh mục.",
+      "testData": "Heading quản lý danh mục.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:56:38.545+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Có tiêu đề hiển thị rõ nội dung quản lý danh mục.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục."
+      ],
+      "actual": "Tiêu đề “Quản lý Danh mục” xuất hiện.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-01.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-02",
+      "screen": "Categories",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Danh mục có hàng mẫu.",
+      "testData": "Một hàng với ID, tên và thao tác Xóa.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:56:44.522+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Các cột ID, tên và thao tác có nhãn dễ hiểu tương ứng dữ liệu.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục."
+      ],
+      "actual": "Ba cột ID, Tên Danh Mục, Hành động hiển thị cùng dòng Điện thoại.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-02.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-03",
+      "screen": "Categories",
+      "ia": "IA-01",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "ASSISTED",
+      "preconditions": "Sandbox; có thể tạo/xóa dữ liệu thử.",
+      "testData": "Tên duy nhất ít nhất 120 ký tự với một đoạn dài không có dấu cách.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:56:50.422+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Tên có thể xem đầy đủ hoặc đọc qua phương thức rõ ràng; nút Xóa vẫn truy cập được và không bị che.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-03 DANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀIDANHMUCDÀI\" rồi gửi form bằng nút Thêm mới.",
+        "Cuộn tới nút Xóa để phân biệt tràn có thể cuộn với điều khiển bị cắt."
+      ],
+      "actual": "Nút Xóa cùng dòng tên dài hiện đầy đủ sau khi cuộn ở viewport 1440 px. Cần xác nhận khả năng đọc tên theo cách cuộn thực tế.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-03.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-04",
+      "screen": "Categories",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Form Danh mục đang thấy.",
+      "testData": "Ô tên danh mục.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/158",
+      "timestamp": "2026-11-14T15:57:01.167+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Ô có nhãn thấy được và tên truy cập có thể nhận diện sau khi nhập.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Kiểm tra nhãn hiển thị, label liên kết và thuộc tính aria của trường tên."
+      ],
+      "actual": "Ô tên chỉ có placeholder “Tên danh mục mới”, không có nhãn hiển thị cố định hoặc label liên kết.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-04.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-05",
+      "screen": "Categories",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Form Danh mục đang thấy.",
+      "testData": "Ô tên danh mục bắt buộc.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/158",
+      "timestamp": "2026-11-14T15:57:07.908+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Có dấu * bên cạnh nhãn trường bắt buộc.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Đọc phần chữ hiển thị của form thêm danh mục."
+      ],
+      "actual": "Form thêm danh mục không có nhãn tên kèm dấu *.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-05.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-06",
+      "screen": "Categories",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox có thể nhận một bản ghi sai; có baseline ID trước test.",
+      "testData": "Tên chuỗi rỗng.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/75",
+      "timestamp": "2026-11-14T15:57:14.870+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Không tạo hàng tên rỗng; giao diện chỉ rõ tên là bắt buộc.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập \"\" và bấm Thêm mới."
+      ],
+      "actual": "Tên \"\" được lưu. Dòng #6 xuất hiện với ô tên \"\".",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-06.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-07",
+      "screen": "Categories",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox; biết tập ID trước khi thử.",
+      "testData": "Ba ký tự ASCII space.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/75",
+      "timestamp": "2026-11-14T15:57:24.571+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Tên không có ký tự nhìn thấy bị từ chối và người dùng biết cần sửa tên.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập \"   \" và bấm Thêm mới."
+      ],
+      "actual": "Tên \"   \" được lưu. Dòng #7 xuất hiện với ô tên \"   \".",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-07.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-08",
+      "screen": "Categories",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form Danh mục.",
+      "testData": "Tên có mã lượt + “Đồ dùng học tập – thử nghiệm”.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:57:34.942+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Chữ có dấu và dấu gạch hiển thị đúng nội dung đã nhập.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-08 Đồ dùng học tập – thử nghiệm\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Dòng mới hiển thị đúng chữ tiếng Việt, dấu và ký tự gạch.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-08.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-09",
+      "screen": "Categories",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form Danh mục.",
+      "testData": "Tên duy nhất kèm chuỗi <b>Thử</b>.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:57:44.924+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Ký tự <b> và </b> hiển thị như văn bản; không tạo phần tử b từ tên.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"<b>HW03-MWG642BV-C-09</b>\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Chuỗi <b>…</b> xuất hiện nguyên văn, không tạo phần tử HTML b.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-09.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-10",
+      "screen": "Categories",
+      "ia": "IA-02",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, focus ô tên.",
+      "testData": "Tên hợp lệ duy nhất.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:57:54.907+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Tạo đúng một danh mục giống thao tác nút Thêm mới.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-10\" rồi gửi form bằng Enter."
+      ],
+      "actual": "Enter gửi form và dòng #10 xuất hiện.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-10.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-11",
+      "screen": "Categories",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Đang ở Dashboard.",
+      "testData": "Mục Danh mục.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:58:03.925+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Form thêm và bảng Danh mục xuất hiện.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục."
+      ],
+      "actual": "Từ Dashboard, mục Danh mục mở đúng form và bảng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-11.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-12",
+      "screen": "Categories",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Đã tạo bản ghi duy nhất qua GUI trong sandbox.",
+      "testData": "Tên thử và ID của bản ghi.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:58:10.156+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Cùng tên và ID còn xuất hiện sau chuyển tab và tải lại.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-12\" rồi gửi form bằng nút Thêm mới.",
+        "Mở Dashboard.",
+        "Mở Danh mục.",
+        "Mở Danh mục."
+      ],
+      "actual": "Dòng #11 vẫn xuất hiện khi quay lại và sau reload.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-12.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-13",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox, form Danh mục.",
+      "testData": "Tên duy nhất hợp lệ.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:58:24.128+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Giao diện phản hồi thành công dễ nhận biết qua cập nhật nhìn thấy được hoặc thông báo có ý nghĩa.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-13\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Dòng #12 xuất hiện ngay và trường tên được dọn trống.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-13.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-14",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox; bảng tải xong, tên thử chưa có.",
+      "testData": "Tên duy nhất hợp lệ.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:58:33.744+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Bảng chứa đúng một hàng mới có tên vừa nhập.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-14\" rồi gửi form bằng nút Thêm mới."
+      ],
+      "actual": "Một lần gửi form tạo đúng một dòng có tên duy nhất.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-14.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-15",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox; chuẩn bị cơ chế giữ một request thật pending.",
+      "testData": "Tên duy nhất, bấm lần hai khi POST đầu còn pending.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/165",
+      "timestamp": "2026-11-14T15:58:44.058+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Một ý định tạo dẫn đến tối đa một bản ghi khi bấm lặp trong lúc đang xử lý.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Giữ POST đầu tới lần bấm thứ hai. Trình duyệt gửi 2 POST trước khi cho request đi tiếp.",
+        "Mở Danh mục."
+      ],
+      "actual": "Hai lần bấm trong lúc chờ tạo 2 hàng cùng tên sau tải lại.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-15.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-16",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox đã tải Danh mục; ngắt kết nối phiên trình duyệt.",
+      "testData": "Tên hợp lệ duy nhất.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/168",
+      "timestamp": "2026-11-14T15:58:57.956+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "UI báo thao tác thất bại dễ hiểu và có hướng sửa/thử lại; tên chưa được tạo.",
+      "status": "Blocked",
+      "steps": [
+        "Mở Danh mục.",
+        "Ngắt riêng kết nối POST /api/categories ở trình duyệt, thực hiện thao tác GUI và đọc sự kiện hộp thoại."
+      ],
+      "actual": "GUI chỉ hiện “Lỗi thêm DM: Request failed with status code 502”, không cho biết cách khôi phục. Form vẫn giữ tên đã nhập.",
+      "notes": "Chưa xác minh Safari nhận lỗi kết nối do proxy ngắt socket. Cần đối chiếu phản hồi qua tunnel.",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-16.png",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi thêm DM: Request failed with status code 502",
+          "action": "dismiss"
+        }
+      ],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        }
+      ]
+    },
+    {
+      "id": "C-17",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Danh mục thử đã tạo bởi lượt chạy.",
+      "testData": "Tên/ID của danh mục thử.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/164",
+      "timestamp": "2026-11-14T15:59:05.773+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Có bước xác nhận rõ đối tượng hoặc cơ hội an toàn tương đương trước khi xóa.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-17\" rồi gửi form bằng nút Thêm mới.",
+        "Bấm Xóa một lần, chờ bảng phản ánh thao tác và theo dõi yêu cầu DELETE/hộp thoại."
+      ],
+      "actual": "Một lần bấm Xóa gửi DELETE và làm mất dòng #16 ngay. Không có hộp thoại xác nhận.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-17.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/categories/16",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-18",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Có danh mục thử và bước xác nhận/hủy của C-17.",
+      "testData": "Tên/ID danh mục thử.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:59:18.970+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Danh mục vẫn tồn tại và không gửi lệnh xóa.",
+      "status": "Blocked",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-18\" rồi gửi form bằng nút Thêm mới.",
+        "Tìm hộp thoại xác nhận để chọn Hủy sau khi bấm Xóa."
+      ],
+      "actual": "Không có bước xác nhận để chọn Hủy. Xem C-17.",
+      "notes": "Thiếu tiền điều kiện đã quan sát.",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-18.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/categories/17",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-19",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Có hàng do test tạo, ghi ID các hàng khác.",
+      "testData": "Tên/ID duy nhất và danh sách ID trước xóa.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:59:28.478+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Chỉ hàng mục tiêu biến mất; các hàng khác giữ nguyên.",
+      "status": "Passed",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-19\" rồi gửi form bằng nút Thêm mới.",
+        "Nhấn Xóa trên đúng dòng #18 và theo dõi bảng."
+      ],
+      "actual": "Chỉ dòng #18 biến mất, các dòng còn lại giữ nguyên.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-19.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/categories/18",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-20",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Hàng thử tồn tại; có thể ngắt kết nối trình duyệt sau khi tải.",
+      "testData": "Tên/ID của hàng thử.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:59:39.709+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "UI báo xóa thất bại và hàng còn nguyên, không thể hiện thành công.",
+      "status": "Blocked",
+      "steps": [
+        "Mở Danh mục.",
+        "Nhập tên \"HW03-MWG642BV-C-20\" rồi gửi form bằng nút Thêm mới.",
+        "Ngắt riêng kết nối DELETE /api/categories/19 ở trình duyệt, thực hiện thao tác GUI và đọc sự kiện hộp thoại."
+      ],
+      "actual": "GUI hiện hộp thoại “Lỗi xóa DM: Request failed with status code 500” và giữ dòng #19.",
+      "notes": "Chưa xác minh Safari nhận lỗi kết nối do proxy ngắt socket. Cần đối chiếu phản hồi qua tunnel.",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-20.png",
+      "dialogs": [
+        {
+          "type": "alert",
+          "message": "Lỗi xóa DM: Request failed with status code 500",
+          "action": "dismiss"
+        }
+      ],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "DELETE",
+          "path": "/api/categories/19",
+          "effect": "socket-disconnect-at-loopback-proxy"
+        }
+      ]
+    },
+    {
+      "id": "C-21",
+      "screen": "Categories",
+      "ia": "IA-04",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "AUTOMATED",
+      "preconditions": "Sandbox hoặc fixture dữ liệu thật riêng có 0 danh mục.",
+      "testData": "GET categories trả danh sách rỗng.",
+      "issue": "https://github.com/nguyenanhtuan2702/eshop-sut/issues/167",
+      "timestamp": "2026-11-14T15:59:49.467+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Có thông báo không có danh mục, người dùng nhận biết có thể thêm mới.",
+      "status": "Failed",
+      "steps": [
+        "Làm rỗng danh mục trong DB dùng riêng, tải lại thật rồi mở Danh mục.",
+        "Mở Danh mục."
+      ],
+      "actual": "Danh mục rỗng có 0 dòng và 0 thông báo trạng thái rỗng. GUI chỉ hiện form và đầu bảng.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-21.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "C-22",
+      "screen": "Categories",
+      "ia": "IA-03",
+      "platform": "safari-apple",
+      "group": "categories",
+      "category": "MANUAL",
+      "preconditions": "Hai danh mục thử cạnh nhau trong sandbox.",
+      "testData": "Test Focus 1, Test Focus 2.",
+      "issue": "",
+      "timestamp": "2026-11-14T15:59:57.506+07:00",
+      "browser": "Safari 18.3",
+      "os": "macOS 14.6",
+      "jobId": "d857a88ec8e34180979511249d9ad963",
+      "expected": "Sau khi xóa hàng thử, lần Tab tiếp theo đưa focus tới điều khiển hợp lý trong bảng, ví dụ nút Xóa của hàng kế tiếp.",
+      "status": "Failed",
+      "steps": [
+        "Mở Danh mục."
+      ],
+      "actual": "Không tới nút Xóa của hàng thử bằng Tab.",
+      "notes": "",
+      "evidence": "evidence/safari-apple/HW03-MWG642BV/C-22.png",
+      "dialogs": [],
+      "diagnostics": [
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        },
+        {
+          "method": "POST",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/users",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/admin/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/products",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/categories",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/coupons",
+          "status": 200
+        }
+      ]
+    }
+  ]
+}
